@@ -39,7 +39,8 @@ In the Lab you will use in IBM Bluemix:
 ![Node-RED_Select_Manage-Palette](images/07_Node-RED_Install_nodes.jpg)
 
 8. After the installation verify that following sections for the installed nodes will appear on the left hand side.
-
+and press install.
+![Node-RED_Select_Manage-Palette](images/08_Node-RED_List_of_installed_nodes.jpg)
 
 ### 1.2 Create and bind the remaining needed services
 
