@@ -45,6 +45,9 @@ and press install.
 ### 1.2 Create and bind the remaining needed services
 
 
+1. Go back to your bluemix application and select on the left hand side connections and press **add new connection**.
+![Bluemix-services_add](images/01_Bluemix-services_add.jpg)
+
 
 # Basic Git Command line instructions
 
