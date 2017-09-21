@@ -17,9 +17,8 @@ In this Lab you will create a **Taxi-Simulartor** for IoT. This Taxi-Simulator w
 
 * The **Node-RED Starter** _Boiler Template_ with contains a **Cloudant DB** and a **Node.JS Server**.
 * You will add additional nodes into the Node-RED instance [Node-RED Dashboard Node](https://flows.nodered.org/node/node-red-dashboard) and [Node-RED Virtual IoT Device Node](https://www.npmjs.com/package/node-red-contrib-iot-virtual-device)
-* The **Watson IoT Service**
-* The **Object Store Database**
-
+* The [Watson IoT Service](https://console.bluemix.net/catalog/services/internet-of-things-platform?env_id=ibm%3Ayp%3Aus-south)
+* The [Object Store Database](https://console.bluemix.net/catalog/services/Object-Storage?env_id=ibm%3Ayp%3Aus-south)
 
 # 1 Setup the needed Application and services
 
@@ -27,7 +26,7 @@ In the part of the Lab you will setup and configure the environment, we will use
 
 ### 1.1 Setup and configure Node-RED
 
-1. Logon to your Bluemix Account and seach in catalog for Node-RED. You will find the **Node-RED Boiler Template** and click on the icon.
+1. Logon to your Bluemix Account and search in catalog for Node-RED. You will find the **Node-RED Boiler Template** and click on the icon.
 ![Node-RED Boiler Template](images/01_Node-RED_Starter.jpg)
 
 2. Now you can see the which application and services will be create. Give the application and route a name like **taxi-simulartor-[YOUR-UNIQUE-NAME]**. Here you can find the **Cloudant DB** and the **Node.JS Server** and **press create**.
@@ -57,14 +56,17 @@ and press install.
 1. Go back to your bluemix application and select on the left hand side **connections** and press **connet new**.
 ![Bluemix-services_add](images/01_Bluemix-services_add.jpg)
 
-2. Search for Watson IoT Service by insert in the catalog search **Internet of Things Platform** and press on the service.
+2. Search for the Watson IoT Service by insert in the catalog search **Internet of Things Platform** and press on the service.
 ![Bluemix-services_search](images/02_Bluemix-services_search.jpg)
 
 3. For the service name insert following name **taxi-simulartor-InternetOfThingsPlatform** and press **create**. Do **NOT** select restage for now.
-![Bluemix-services_search](images/02_Bluemix-services_add_iot.jpg)
+![Bluemix-services_add_iot](images/02_Bluemix-services_add_iot.jpg)
 
-4. Do step 2 and 3 now with the  service name insert following name **taxi-simulartor-InternetOfThingsPlatform** and press **create**. Do **NOT** select restage for now.
-![Bluemix-services_search](images/02_Bluemix-services_add_iot.jpg)
+4. Now open the Bluemix catalog directly.
+![Bluemix-services_catalog](images/04_Bluemix-services_catalog.jpg)
+
+5. Search for the **Cloud Object Storage** directly in the catalog and select in this infrastructure component the **Bluemix Storage Swift**.
+![Bluemix-services_search](images/02_Bluemix-services_cloud_object_storage.jpg)
 
 # Basic Git Command line instructions
 
