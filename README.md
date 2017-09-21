@@ -74,6 +74,12 @@ In the part of the Lab you will setup and configure the environment, we will use
 3. Name the service like this **taxi-simulator-ObjectStorage** and press create. _NOTE:_ You can only use **ONE** instance per **ORAGNIZATION** of **Cloud Object Storage**
 ![Bluemix-services_create_object_storage](images/06_Bluemix-services_create_object_storage.jpg)
 
+4. Open your Bluemix Application in the Bluemix Dashboard and select **connections**.
+
+5. Then select **connect existing** and search for your just created **Cloud Object Storage for Bluemix** service. If you are now ask to restage the application press **OK**.
+
+6. Alter this steps have connected services look like in the following picture. In my case I have a different name for the **cloud object storage** service.
+![Bluemix-services_connected_services](07_Bluemix_services_connected_services.jpg)
 
 
 # Basic Git Command line instructions
