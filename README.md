@@ -65,7 +65,7 @@ In the part of the Lab you will setup and configure the environment, we will use
 ![Bluemix-services_add_iot](images/02_Bluemix_services_add_iot.jpg)
 
 4. Repeat the steps 1 to 3 for the Service **MessageHub**
- 
+
 **Cloud object storage**
 
 1. Now open the Bluemix catalog directly.
@@ -84,21 +84,23 @@ In the part of the Lab you will setup and configure the environment, we will use
 6. Alter this steps have connected services look like in the following picture. In my case I have a different name for the **cloud object storage** service.
 ![Bluemix-services_connected_services](07_Bluemix_services_connected_services.jpg)
 
-# 2 Configure the needed services
+# 2 Configure the needed services and apply changes to the Node-RED flow
+
+1. Create a new application token in IoT
+2. Insert the application token into the IoT node inside the Node-RED flow
 
 
 
 
+# 3 Basic Git Command line instructions
 
-# Basic Git Command line instructions
-
-## Git global setup
+## 3.1 Git global setup
 
 ```
 git config --global user.name "Thomas Südbröcker"
 git config --global user.email "thomas.suedbroecker.2@de.ibm.com"
 ```
-## Create a new repository
+## 3.2 Create a new repository
 
 ```
 git clone git@git.ng.bluemix.net:thomas.suedbroecker.2/Bluemix-Hands-on-Workshop-IoT.git
@@ -109,7 +111,7 @@ git commit -m "add README"
 git push -u origin master
 ```
 
-## Existing folder
+## 3.3 Existing folder
 
 ```
 cd existing_folder
