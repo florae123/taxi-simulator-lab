@@ -29,16 +29,16 @@ In the part of the Lab you will setup and configure the environment, we will use
 1. Logon to your Bluemix Account and search in catalog for Node-RED. You will find the **Node-RED Boiler Template** and click on the icon.
 ![Node-RED Boiler Template](images/01_Node-RED_Starter.jpg)
 
-2. Now you can see the which application and services will be create. Give the application and route a name like **taxi-simulartor-[YOUR-UNIQUE-NAME]**. Here you can find the **Cloudant DB** and the **Node.JS Server** and **press create**.
+2. Now you can see the which application and services will be create. Give the application and route a name like **taxi-simulartor-[YOUR-UNIQUE-NAME]**. Here you can find the **Cloudant DB** and the **Node.JS Server** and press **create**.
 ![Node-RED Boiler Template Configuration](images/02_Node-RED_Starter_Setup.jpg)
 
 3. After this step select the **Visit App URL** to get to the Running Node-RED instance on the Node.JS Server.
-![Node-RED Boiler Template Visit URL](images/02_Node-RED_Starter-visit-URL.jpg)
+![Node-RED Boiler Template Visit URL](images/03_Node-RED_Starter-visit-URL.jpg)
 
 4. Now just **follow the steps in the wizard** to do the basic configuration of the Node-RED instance.
 ![Node-RED Boiler Template Follow the steps in the wizard](images/04_Node-RED_Follow_the_Steps_in_the_wizard.jpg)
 
-5. Now inspect the landing page and press **Go to your Node-RED flow**.
+5. Now inspect the landing page and press **Go to your Node-RED flow editor**.
 ![Node-RED Boiler Template Inspect the landing page and press go to node red_ ditor](images/05_Node-RED_Inspect_the_landing_page_and_press_go_to_node_red_editor.jpg)
 
 6. Inside Node-RED we had to add the additional _Nodes_ we will use in our future flow. The [Node-RED Dashboard Package](https://flows.nodered.org/node/node-red-dashboard) and the [Node-RED Virtual IoT Device Package](https://www.npmjs.com/package/node-red-contrib-iot-virtual-device) . First select **manage palatte** from the menu on right upper side of the page.
@@ -48,7 +48,6 @@ In the part of the Lab you will setup and configure the environment, we will use
 ![Node-RED_Select_Manage-Palette](images/07_Node-RED_Install_nodes.jpg)
 
 8. After the installation verify that following sections for the installed nodes will appear on the left hand side.
-and press install.
 ![Node-RED_Select_Manage-Palette](images/08_Node-RED_List_of_installed_nodes.jpg)
 
 ### 1.2 Create and bind the remaining needed Bluemix services
@@ -56,24 +55,24 @@ and press install.
 **Watson IoT**
 
 1. Go back to your bluemix application and select on the left hand side **connections** and press **connet new**.
-![Bluemix-services_add](images/01_Bluemix-services_add.jpg)
+![Bluemix-services_add](images/01_Bluemix_services_add.jpg)
 
 2. Search for the Watson IoT Service by insert in the catalog search **Internet of Things Platform** and press on the service.
-![Bluemix-services_search](images/02_Bluemix-services_search.jpg)
+![Bluemix-services_search](images/02_Bluemix_services_search.jpg)
 
 3. For the service name insert following name **taxi-simulartor-InternetOfThingsPlatform** and press **create**. Do **NOT** select restage for now.
-![Bluemix-services_add_iot](images/02_Bluemix-services_add_iot.jpg)
+![Bluemix-services_add_iot](images/02_Bluemix_services_add_iot.jpg)
 
 **Cloud object storage**
 
 1. Now open the Bluemix catalog directly.
-![Bluemix-services_catalog](images/04_Bluemix-services_catalog.jpg)
+![Bluemix-services_catalog](images/04_Bluemix_services_catalog.jpg)
 
 2. Search for the **Cloud Object Storage** directly in the catalog and select in this infrastructure component the **Bluemix Storage Swift**.
-![Bluemix-services_cloud_object_storage](images/02_Bluemix-services_cloud_object_storage.jpg)
+![Bluemix-services_cloud_object_storage](images/05_Bluemix-services_cloud_object_storage.jpg)
 
-3. Name the service like this **taxi-simulator-ObjectStorage** and press create. _NOTE:_ You can only use ONE instance per region of **Cloud Object Storage**
-![Bluemix-services_create_object_storage](images/02_Bluemix-services_create_object_storage.jpg)
+3. Name the service like this **taxi-simulator-ObjectStorage** and press create. _NOTE:_ You can only use **ONE** instance per **ORAGNIZATION** of **Cloud Object Storage**
+![Bluemix-services_create_object_storage](images/06_Bluemix-services_create_object_storage.jpg)
 
 
 
