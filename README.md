@@ -1,26 +1,36 @@
-# Bluemix Hands-on Lab for IoT
+# Bluemix Hands-on Lab for IoT Creating a Taxi-Simulartor
 
+In this Lab you will create a **Taxi-Simulartor** for IoT. This Taxi-Simulator will create sample data for a Data Analytics part, in one of the following Hands-on Labs.
 
-This Lab Contains the steps to setup:
+**Functionality:**
 
-* A sample for Taxis which do sending their speed and location information.
+1. The simulator will create different Taxi devices inside the Watson IoT Platform.
+2. You can choose the count of the taxis you want create.
+3. A created taxi will simulate speed and geolocation and the created data will be stored in a database.
+
+**This Hands-on Lab Contains the steps to setup:**
+
+* A simulator for Taxis, which do sending their speed and location information.
 * Setup the IBM Watson IoT
 
-In the Lab you will use in IBM Bluemix:
+**In the Hands-on Lab  you will use in IBM Bluemix:**
+
 * The **Node-RED Starter** _Boiler Template_ with contains a **Cloudant DB** and a **Node.JS Server**.
-* We will add additional Nodes into the Node-RED instance [Node-RED Dashboard Node](https://flows.nodered.org/node/node-red-dashboard) and [Node-RED Virtual IoT Device Node](https://www.npmjs.com/package/node-red-contrib-iot-virtual-device)
+* You will add additional nodes into the Node-RED instance [Node-RED Dashboard Node](https://flows.nodered.org/node/node-red-dashboard) and [Node-RED Virtual IoT Device Node](https://www.npmjs.com/package/node-red-contrib-iot-virtual-device)
 * The **Watson IoT Service**
-* A **Object Store Database**
+* The **Object Store Database**
 
 
-## 1 Setup the needed Application and services
+# 1 Setup the needed Application and services
+
+In the part of the Lab you will setup and configure the environment, we will use for you Taxi-Simulartor.
 
 ### 1.1 Setup and configure Node-RED
 
 1. Logon to your Bluemix Account and seach in catalog for Node-RED. You will find the **Node-RED Boiler Template** and click on the icon.
 ![Node-RED Boiler Template](images/01_Node-RED_Starter.jpg)
 
-2. Now you can see the which application and services will be create. Give the application and route a name like taxi-simulartor-[YOUR-UNIQUE-NAME]. Here you can find the **Cloudant DB** and the **Node.JS Server** and **press create**.
+2. Now you can see the which application and services will be create. Give the application and route a name like **taxi-simulartor-[YOUR-UNIQUE-NAME]**. Here you can find the **Cloudant DB** and the **Node.JS Server** and **press create**.
 ![Node-RED Boiler Template Configuration](images/02_Node-RED_Starter_Setup.jpg)
 
 3. After this step select the **Visit App URL** to get to the Running Node-RED instance on the Node.JS Server.
@@ -42,12 +52,19 @@ In the Lab you will use in IBM Bluemix:
 and press install.
 ![Node-RED_Select_Manage-Palette](images/08_Node-RED_List_of_installed_nodes.jpg)
 
-### 1.2 Create and bind the remaining needed services
+### 1.2 Create and bind the remaining needed Bluemix services
 
-
-1. Go back to your bluemix application and select on the left hand side connections and press **add new connection**.
+1. Go back to your bluemix application and select on the left hand side **connections** and press **connet new**.
 ![Bluemix-services_add](images/01_Bluemix-services_add.jpg)
 
+2. Search for Watson IoT Service by insert in the catalog search **Internet of Things Platform** and press on the service.
+![Bluemix-services_search](images/02_Bluemix-services_search.jpg)
+
+3. For the service name insert following name **taxi-simulartor-InternetOfThingsPlatform** and press **create**. Do **NOT** select restage for now.
+![Bluemix-services_search](images/02_Bluemix-services_add_iot.jpg)
+
+4. Do step 2 and 3 now with the  service name insert following name **taxi-simulartor-InternetOfThingsPlatform** and press **create**. Do **NOT** select restage for now.
+![Bluemix-services_search](images/02_Bluemix-services_add_iot.jpg)
 
 # Basic Git Command line instructions
 
