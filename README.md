@@ -19,11 +19,11 @@ In the Lab you will use in IBM Bluemix:
 
 1. Logon to your Bluemix Account and seach in catalog for Node-RED. You will find the *Node-RED Boiler Template* and click on the icon.
 
-![Node-RED Boiler Template](blob/master/images/01_Node-RED_Starter.jpeg)
+![Node-RED Boiler Template](images/01_Node-RED_Starter.jpg)
 
 2. Now you can see the which application and services will be create. Give the application and route a name like taxi-simulartor-[YOUR-UNIQUE-NAME]. Here you can find the *Cloudant DB* and the *Node.JS Server*
 
-![Node-RED Boiler Template Configuration](blob/master/images/01_Node-RED_Starter-Setup.jpeg)
+![Node-RED Boiler Template Configuration](images/01_Node-RED_Starter-Setup.jpg)
 
 # Basic Git Command line instructions
 
