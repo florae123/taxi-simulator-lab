@@ -38,6 +38,8 @@ In the Lab you will use in IBM Bluemix:
 7. Now choose the Tab **install** and search for the two Packages **node-red-dashboard** and **node-red-contrib-iot-virtual-device** and press install.
 ![Node-RED_Select_Manage-Palette](images/07_Node-RED_Install_nodes.jpg)
 
+8. After the installation verify that following sections for the installed nodes will appear on the left hand side.
+
 
 ### 1.2 Create and bind the remaining needed services
 
