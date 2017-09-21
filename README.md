@@ -8,7 +8,7 @@ This Lab Contains the steps to setup:
 
 In the Lab you will use in IBM Bluemix:
 * The *Node-RED Starter* _Boiler Template_ with contains a *Cloudant DB* and a *Node.JS Server*.
-* [Node-RED Dashboard Package](https://github.com/node-red/node-red-dashboard)
+* [Node-RED Dashboard Package](https://flows.nodered.org/node/node-red-dashboard)
 * [Node-RED Virtual IoT Device Package](https://www.npmjs.com/package/node-red-contrib-iot-virtual-device)
 * The *Watson IoT Service*
 * A *Object Store Database*
@@ -28,6 +28,13 @@ In the Lab you will use in IBM Bluemix:
 3. After this step select the *Visit App URL* to get to the Running Node-RED instance on the Node.JS Server.
 
 ![Node-RED Boiler Template Visit URL](images/02_Node-RED_Starter-Visit-URL.jpg)
+
+4. Now just *follow the steps in the wizard* to do the basic configuration of the Node-RED instance.
+
+![Node-RED Boiler Template Follow the steps in the wizard](images/04_Node-RED_Follow_the_Steps_in_the_wizard)
+
+5. Now inspect the landing page and press *Go to your Node-RED flow*.
+![Node-RED Boiler Template Inspect the landing page and press go to node red_ ditor](images/05_Node-RED_Inspect_the_landing_page_and_press_go_to_node_red_editor.jpg)
 
 # Basic Git Command line instructions
 
