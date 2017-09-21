@@ -1,6 +1,5 @@
 # Bluemix Hands-on Lab for IoT
 
-# Basic Git Command line instructions
 
 This Lab Contains the steps to setup:
 
@@ -8,12 +7,25 @@ This Lab Contains the steps to setup:
 * Setup the IBM Watson IoT
 
 In the Lab you will use in IBM Bluemix:
-* The Node-RED Boiler Template
-* Node-RED Dashboard Package (https://github.com/node-red/node-red-dashboard)
-* Node-RED Virtual IoT Device Package (https://www.npmjs.com/package/node-red-contrib-iot-virtual-device)
-* The Watson IoT Service
-* A Object Store Database
+* The *Node-RED Starter* _Boiler Template_ with contains a *Cloudant DB* and a *Node.JS Server*.
+* [Node-RED Dashboard Package](https://github.com/node-red/node-red-dashboard)
+* [Node-RED Virtual IoT Device Package](https://www.npmjs.com/package/node-red-contrib-iot-virtual-device)
+* The *Watson IoT Service*
+* A *Object Store Database*
 
+
+## Setup the needed Application and services
+
+
+1. Logon to your Bluemix Account and seach in catalog for Node-RED. You will find the *Node-RED Boiler Template* and click on the icon.
+
+![Node-RED Boiler Template](images/01_Node-RED_Starter.jpeg)
+
+2. Now you can see the which application and services will be create. Give the application and route a name like taxi-simulartor-[YOUR-UNIQUE-NAME]. Here you can find the *Cloudant DB* and the *Node.JS Server*
+
+![Node-RED Boiler Template Configuration](images/01_Node-RED_Starter-Setup.jpeg)
+
+# Basic Git Command line instructions
 
 ## Git global setup
 
