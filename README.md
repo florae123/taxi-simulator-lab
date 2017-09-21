@@ -9,7 +9,11 @@ This Lab Contains the steps to setup:
 
 In the Lab you will use in IBM Bluemix:
 * The Node-RED Boiler Template
+* Node-RED Dashboard Package (https://github.com/node-red/node-red-dashboard)
+* Node-RED Virtual IoT Device Package (https://www.npmjs.com/package/node-red-contrib-iot-virtual-device)
 * The Watson IoT Service
+* A Object Store Database
+
 
 ## Git global setup
 
