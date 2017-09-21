@@ -86,10 +86,11 @@ In the part of the Lab you will setup and configure the environment, we will use
 
 # 2 Configure the needed services and apply changes to the Node-RED flow
 
+1. Copy the existing Node-RED flow into the Node-RED instance
+
+IoT
 1. Create a new application token in IoT
 2. Insert the application token into the IoT node inside the Node-RED flow
-
-
 
 
 # 3 Basic Git Command line instructions
