@@ -53,6 +53,8 @@ and press install.
 
 ### 1.2 Create and bind the remaining needed Bluemix services
 
+**Watson IoT**
+
 1. Go back to your bluemix application and select on the left hand side **connections** and press **connet new**.
 ![Bluemix-services_add](images/01_Bluemix-services_add.jpg)
 
@@ -62,11 +64,18 @@ and press install.
 3. For the service name insert following name **taxi-simulartor-InternetOfThingsPlatform** and press **create**. Do **NOT** select restage for now.
 ![Bluemix-services_add_iot](images/02_Bluemix-services_add_iot.jpg)
 
-4. Now open the Bluemix catalog directly.
+**Cloud object storage**
+
+1. Now open the Bluemix catalog directly.
 ![Bluemix-services_catalog](images/04_Bluemix-services_catalog.jpg)
 
-5. Search for the **Cloud Object Storage** directly in the catalog and select in this infrastructure component the **Bluemix Storage Swift**.
-![Bluemix-services_search](images/02_Bluemix-services_cloud_object_storage.jpg)
+2. Search for the **Cloud Object Storage** directly in the catalog and select in this infrastructure component the **Bluemix Storage Swift**.
+![Bluemix-services_cloud_object_storage](images/02_Bluemix-services_cloud_object_storage.jpg)
+
+3. Name the service like this **taxi-simulator-ObjectStorage** and press create. _NOTE:_ You can only use ONE instance per region of **Cloud Object Storage**
+![Bluemix-services_create_object_storage](images/02_Bluemix-services_create_object_storage.jpg)
+
+
 
 # Basic Git Command line instructions
 
