@@ -103,10 +103,13 @@ IoT
 
 4. Add debug node and make a connection to the IoT Output node
 
-4. Add Switch node
+5. Add a switch node
 
-5. Insert in switch node at property **payload.d.velocity** and add a rule for > 50 and <50. 
+6. Insert in switch node at property **payload.d.velocity** and add a rule for > 50 and <50.
 ![Node-RED configure switch node](images/10_Node-RED_Configure_switch_node.jpg)
+
+7. Create new debug node and connect each output of the switch node.
+![Node-RED configure connect switch to debug](images/11_Node-RED_Connect_debug_to_switch.jpg)
 
 
 # 4 Basic Git Command line instructions
