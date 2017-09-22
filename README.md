@@ -82,7 +82,7 @@ In the part of the Lab you will setup and configure the environment, we will use
 5. Then select **connect existing** and search for your just created **Cloud Object Storage for Bluemix** service. If you are now ask to restage the application press **OK**.
 
 6. Alter this steps have connected services look like in the following picture. In my case I have a different name for the **cloud object storage** service.
-![Bluemix-services_connected_services](07_Bluemix_services_connected_services.jpg)
+![Bluemix-services_connected_services](images/07_Bluemix_services_connected_services.jpg)
 
 # 2 Configure the needed services and apply changes to the Node-RED flow
 
