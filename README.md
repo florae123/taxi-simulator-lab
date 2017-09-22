@@ -74,7 +74,7 @@ In the part of the Lab you will setup and configure the environment, we will use
 2. Search for the **Cloud Object Storage** directly in the catalog and select in this infrastructure component the **Bluemix Storage Swift**.
 ![Bluemix-services_cloud_object_storage](images/05_Bluemix_services_cloud_object_storage.jpg)
 
-3. Name the service like this **taxi-simulator-ObjectStorage** and press create. _NOTE:_ You can only use **ONE** instance per **ORAGNIZATION** of **Cloud Object Storage**
+3. Name the service like this **taxi-simulator-ObjectStorage** and press create. _NOTE:_ You can only use **ONE** instance per **ORAGNIZATION** of **Cloud Object Storage**.
 ![Bluemix-services_create_object_storage](images/06_Bluemix_services_create_object_storage.jpg)
 
 4. Open your Bluemix Application in the Bluemix Dashboard and select **connections**.
@@ -94,16 +94,30 @@ IoT
 1. Create a new application token in IoT
 2. Insert the application token into the IoT node inside the Node-RED flow
 
+# 3 Use Watson IoT input to Node-RED
 
-# 3 Basic Git Command line instructions
+1. Create IoT input node
 
-## 3.1 Git global setup
+2. Configure IoT input node
+![Node-RED configure switch node](images/11_Node-RED_Configure_iot_input_node.jpg)
+
+4. Add debug node and make a connection to the IoT Output node
+
+4. Add Switch node
+
+5. Insert in switch node at property **payload.d.velocity** and add a rule for > 50 and <50. 
+![Node-RED configure switch node](images/10_Node-RED_Configure_switch_node.jpg)
+
+
+# 4 Basic Git Command line instructions
+
+## 4.1 Git global setup
 
 ```
 git config --global user.name "Thomas Südbröcker"
 git config --global user.email "thomas.suedbroecker.2@de.ibm.com"
 ```
-## 3.2 Create a new repository
+## 4.2 Create a new repository
 
 ```
 git clone git@git.ng.bluemix.net:thomas.suedbroecker.2/Bluemix-Hands-on-Workshop-IoT.git
@@ -114,7 +128,7 @@ git commit -m "add README"
 git push -u origin master
 ```
 
-## 3.3 Existing folder
+## 4.3 Existing folder
 
 ```
 cd existing_folder
