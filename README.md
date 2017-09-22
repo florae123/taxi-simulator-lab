@@ -72,10 +72,10 @@ In the part of the Lab you will setup and configure the environment, we will use
 ![Bluemix-services_catalog](images/04_Bluemix_services_catalog.jpg)
 
 2. Search for the **Cloud Object Storage** directly in the catalog and select in this infrastructure component the **Bluemix Storage Swift**.
-![Bluemix-services_cloud_object_storage](images/05_Bluemix-services_cloud_object_storage.jpg)
+![Bluemix-services_cloud_object_storage](images/05_Bluemix_services_cloud_object_storage.jpg)
 
 3. Name the service like this **taxi-simulator-ObjectStorage** and press create. _NOTE:_ You can only use **ONE** instance per **ORAGNIZATION** of **Cloud Object Storage**
-![Bluemix-services_create_object_storage](images/06_Bluemix-services_create_object_storage.jpg)
+![Bluemix-services_create_object_storage](images/06_Bluemix_services_create_object_storage.jpg)
 
 4. Open your Bluemix Application in the Bluemix Dashboard and select **connections**.
 
