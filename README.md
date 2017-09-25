@@ -102,34 +102,34 @@ IoT
 
 # 3 Use Watson IoT input to Node-RED
 
-0. You will start with this flow
+0. You will start with this flow                                           
 ![Node-RED start with own flow](12_Node-RED_Start_own_flow.jpg)
 
 1. Create IoT input node
 
-2. Configure IoT input node.
+2. Configure IoT input node.                                             
 ![Node-RED configure iot input node](images/11_Node-RED_Configure_iot_input_node.jpg)
 
 4. Add debug node and make a connection to the IoT input node
 
 5. Add a switch node
 
-6. Insert in the switch node into property the string **payload.d.velocity** and add a rules for > 50 and <50.
+6. Insert in the switch node into property the string **payload.d.velocity** and add a rules for > 50 and <50.              
 ![Node-RED configure switch node](images/10_Node-RED_Configure_switch_node.jpg)
 
-7. Create new debug node and connect each output of the switch node.
+7. Create new debug node and connect each output of the switch node.              
 ![Node-RED configure connect switch to debug](images/12_Node-RED_Connect_debug_to_switch.jpg)
 
-8. Create a new function node to build a text message in case of danger.
-![Node-RED Function node danger](images/13_Node-RED_Function_node_danger)
+8. Create a new function node to build a text message in case of danger.        
+![Node-RED Function node danger](images/13_Node-RED_Function_node_danger.jpg)
 ```
   // Danger
   msg.payload = "The velocity of " + msg.payload.d.velocity + " of the Taxi is to high!";
   return msg;
 ```
 
-9. Create a two additional function nodes one to build a text message in case of safe status and one for all and insert following code.
-![Node-RED All function nodes](images/14_Node-RED_All_function_nodes)
+9. Create a two additional function nodes one to build a text message in case of safe status and one for all and insert following code.          
+![Node-RED All function nodes](images/14_Node-RED_All_function_nodes.jpg)
 ```
   // Safe
   msg.payload = "The velocity is " + msg.payload.d.velocity + ".";
