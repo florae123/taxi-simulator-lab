@@ -3,6 +3,7 @@
 # 1) chmod u+x git-commit.sh
 # 2) ./git-commit.sh
 # https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+# https://mediatemple.net/community/products/grid/204644730/using-an-ssh-config-file
 
 echo "Insert your Email:"
 read email

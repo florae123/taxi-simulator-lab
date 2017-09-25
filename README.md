@@ -2,16 +2,22 @@
 
 In this Lab you will create a **Taxi-Simulartor** for IoT. This Taxi-Simulator will create sample data for a Data Analytics part, in one of the following Hands-on Labs.
 
-**Functionality:**
+The objective is you will get a basic understanding of the IBM IoT and
+customize your own flow in Node-RED, using the give given IoT Data to display in your Node-RED Dashboard.
+
+**Functionality of the existing Node-RED flow**
 
 1. The simulator will create different Taxi devices inside the Watson IoT Platform.
 2. You can choose the count of the taxis you want create.
 3. A created taxi will simulate speed and geolocation and the created data will be stored in a database.
 
-**This Hands-on Lab Contains the steps to setup:**
+**This Hands-on Lab Contains the following steps**
 
+*a) Setup:*
 * A simulator for Taxis, which do sending their speed and location information.
 * Setup the IBM Watson IoT
+
+*b) Create your own Node-RED flow
 
 **In the Hands-on Lab  you will use in IBM Bluemix:**
 
@@ -74,14 +80,14 @@ In the part of the Lab you will setup and configure the environment, we will use
 2. Search for the **Cloud Object Storage** directly in the catalog and select in this infrastructure component the **Bluemix Storage Swift**.
 ![Bluemix-services_cloud_object_storage](images/05_Bluemix_services_cloud_object_storage.jpg)
 
-3. Name the service like this **taxi-simulator-ObjectStorage** and press create. _NOTE:_ You can only use **ONE** instance per **ORAGNIZATION** of **Cloud Object Storage**.
+3. Name the service like this **taxi-simulator-ObjectStorage** and press create. _NOTE:_ You can only use **ONE** instance per **ORAGNIZATION** of **Cloud Object Storage**.                       
 ![Bluemix-services_create_object_storage](images/06_Bluemix_services_create_object_storage.jpg)
 
 4. Open your Bluemix Application in the Bluemix Dashboard and select **connections**.
 
 5. Then select **connect existing** and search for your just created **Cloud Object Storage for Bluemix** service. If you are now ask to restage the application press **OK**.
 
-6. Alter this steps have connected services look like in the following picture. In my case I have a different name for the **cloud object storage** service.
+6. Alter this steps have connected services look like in the following picture. In my case I have a different name for the **cloud object storage** service.                               
 ![Bluemix-services_connected_services](images/07_Bluemix_services_connected_services.jpg)
 
 # 2 Configure the needed services and apply changes to the Node-RED flow
