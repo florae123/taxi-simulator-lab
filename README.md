@@ -98,7 +98,8 @@ In the part of the Lab you will setup and configure the environment, we will use
 2. Open the file **XXXXX** in GitHub and all select the the content into the clipboard
 3. Inside Node-RED select **Menu->Import->Clipboard**
 
-IoT
+Watson IoT Service
+
 1. Create a new application token in IoT
 2. Insert the application token into the IoT node inside the Node-RED flow
 
@@ -119,7 +120,7 @@ IoT
 6. Insert in the switch node into property the string **payload.d.velocity** and add a rules for > 50 and <50.              
 ![Node-RED configure switch node](images/10_Node-RED_Configure_switch_node.jpg)
 
-7. Create new debug node and connect each output of the switch node.              
+7. Create a new debug node and connect each output of the switch node.              
 ![Node-RED configure connect switch to debug](images/12_Node-RED_Connect_debug_to_switch.jpg)
 
 8. Create a new function node to build a text message in case of danger.        
@@ -130,7 +131,7 @@ IoT
   return msg;
 ```
 
-9. Create a two additional function nodes one to build a text message in case of safe status and one for all and insert following code.          
+9. Create a two additional function nodes; one to build a text message in case of safe status and one for forward all data and insert following code.          
 ![Node-RED All function nodes](images/14_Node-RED_All_function_nodes.jpg)
 ```
   // Safe
@@ -142,8 +143,6 @@ IoT
   msg.payload = msg.payload.d.velocity;
   return msg;
 ```
-
-
 
 
 # 4 Basic Git Command line instructions
