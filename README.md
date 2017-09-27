@@ -17,7 +17,9 @@ customize your own flow in Node-RED, using the give given IoT Data to display in
 * A simulator for Taxis, which do sending their speed and location information.
 * Setup the IBM Watson IoT
 
-*b) Create your own Node-RED flow
+*b) Create your own Node-RED flow*
+* Use Watson IoT as input in your flow
+* Use the Node-RED for implementing some logic and UI
 
 **In the Hands-on Lab  you will use in IBM Bluemix:**
 
