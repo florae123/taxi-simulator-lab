@@ -1,15 +1,19 @@
 # Bluemix Hands-on Lab for IoT Creating a Taxi-Simulartor
 
-In this Lab you will create a **Taxi-Simulartor** for IoT. This Taxi-Simulator will create sample data for a Data Analytics part, in one of the following Hands-on Labs.
+In this Lab you will create a **Taxi-Simulartor** for IoT. This Taxi-Simulator will create sample data for a Data Analytics part, in one of the following Labs of a Hands-on Workshop.
 
-The objective is you will get a basic understanding of the IBM IoT and
-customize your own flow in Node-RED, using the give given IoT Data to display in your Node-RED Dashboard.
+The objective that you will get a basic understanding of the IBM IoT and how
+customize your own flow in Node-RED, by using the given IoT Data to display in your Node-RED Dashboard UI.
 
 **Functionality of the existing Node-RED flow**
 
-1. The simulator will create different Taxi devices inside the Watson IoT Platform.
-2. You can choose the count of the taxis you want create.
+1. With the taxi-simulator you can create different Taxi devices inside the Watson IoT Platform.
+2. You can choose the count of the taxis you want to create.
 3. A created taxi will simulate speed and geolocation and the created data will be stored in a database.
+4. The flow contains a dashboard UI which provides
+- Create sample IoT devices
+- Observe the speeding of the Taxis
+- Observe the first simulated taxi and if the speeding is to high get a notification. (This will be your task to implement)
 
 **This Hands-on Lab Contains the following steps**
 
@@ -106,6 +110,9 @@ In the part of the Lab you will setup and configure the environment, we will use
 3. Take look into the three tabs
 ![Node-RED_Import_node_red_flow_02](images/16_Node-RED_Import_node_red_flow_02.jpg)
 
+4. Press **Deploy** in the right upper corner of the Node-RED Editor page.
+
+
 ## 2.3 Configure the Watson IoT inside the Node-RED Taxi-Simulation Tab
 
 Create a app API-Key inside the Watson IoT Service and insert the information inside the existing Node-RED flow.
@@ -136,7 +143,9 @@ Create a app API-Key inside the Watson IoT Service and insert the information in
 ```
 
 5. Also copy the Organization ID you can find in the right upper corner of the Watson IoT WebPage into the **set predefined config for Watson IoT** node.
-![Watson_IoT_app_key_05](images/04_Watson_IoT_app_key_05.jpg)
+![Watson_IoT_app_key_05](images/05_Watson_IoT_app_key_05.jpg)
+
+6. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
 
 2. Insert the application token into the IoT node inside the Node-RED flow
@@ -181,7 +190,7 @@ Create a app API-Key inside the Watson IoT Service and insert the information in
   msg.payload = msg.payload.d.velocity;
   return msg;
 ```
-
+6. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
 # 4 Basic Git Command line instructions
 
@@ -191,6 +200,7 @@ Create a app API-Key inside the Watson IoT Service and insert the information in
 git config --global user.name "Thomas Südbröcker"
 git config --global user.email "thomas.suedbroecker.2@de.ibm.com"
 ```
+
 ## 4.2 Create a new repository
 
 ```
