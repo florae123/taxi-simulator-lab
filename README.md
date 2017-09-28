@@ -135,8 +135,8 @@ Create a app API-Key inside the Watson IoT Service and insert the information in
       return msg
 ```
 
-5. The Organization ID you can find in the right upper corner of the Watson IoT WebPage.
-![Watson_IoT_app_key_04](images/04_Watson_IoT_app_key_04.jpg)
+5. Also copy the Organization ID you can find in the right upper corner of the Watson IoT WebPage into the **set predefined config for Watson IoT** node.
+![Watson_IoT_app_key_05](images/04_Watson_IoT_app_key_05.jpg)
 
 
 2. Insert the application token into the IoT node inside the Node-RED flow
