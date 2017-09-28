@@ -96,13 +96,48 @@ In the part of the Lab you will setup and configure the environment, we will use
 
 ## 2.1 Import existing Node-RED flow
 
-1. Copy the prepared Node-RED flow into the your Node-RED instance
-2. Open the file **XXXXX** in GitHub and all select the the content into the clipboard
-3. Inside Node-RED select **Menu->Import->Clipboard**
+**Copy the prepared Node-RED flow into the your Node-RED instance**
 
-Watson IoT Service
+1. Open the file **Lab_start_20170928.json** in GitHub and all select the the content into the clipboard
 
-1. Create a new application token in IoT
+2. Inside Node-RED select **Menu->Import->Clipboard**
+![Node-RED_Import_node_red_flow_01](images/15_Node-RED_Import_node_red_flow_01.jpg)
+
+3. Take look into the three tabs
+![Node-RED_Import_node_red_flow_02](images/16_Node-RED_Import_node_red_flow_02.jpg)
+
+## 2.3 Configure the Watson IoT inside the Node-RED Taxi-Simulation Tab
+
+Create a app API-Key inside the Watson IoT Service and insert the information inside the existing Node-RED flow.
+
+1. Open the existing Watson IoT Service and press launch
+![Watson_IoT_open](images/01_Watson_IoT_open.jpg)
+
+2. Create a new application API-Key inside Watson IoT by pressing **Generate API Key**
+![Watson_IoT_app_key_01](images/02_Watson_IoT_app_key_01.jpg)
+
+3. Change API Role to **Backend Trusted Application** and insert as comment **Taxi-Simulation**.
+**NOTE: DON'T CLOSE THIS WINDOW!!!**
+![Watson_IoT_app_key_03](images/03_Watson_IoT_app_key_03.jpg)
+
+4. Now copy and paste API Key and Authentication Token into  the Node-RED flow in Tab **Configure-TaxiSimulation**, by open the function node **set predefined config for Watson IoT** and replace the existing **API Key** and **API Token** with your value. Use **API Key** for **Username** and **API Token** for **Password**.
+```
+/* Watson IoT:
+   ============
+   Organization: XXXX
+   API Key  :    a-XXXX-twkonxv5oo
+   API Token:    XX+0xANGIYdQG&SdXI
+*/
+
+flow.set("orgid", "XXXX");
+flow.set("instances","2");
+flow.set("username", "a-XXXX-twkonxv5oo");
+flow.set("password", "XX+0xANGIYdQG&SdXI");
+return msg
+```
+
+
+
 2. Insert the application token into the IoT node inside the Node-RED flow
 
 # 3 Use Watson IoT input to Node-RED
