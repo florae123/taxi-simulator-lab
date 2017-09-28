@@ -94,6 +94,8 @@ In the part of the Lab you will setup and configure the environment, we will use
 
 # 2 Configure the needed services and apply changes to the Node-RED flow
 
+## 2.1 Import existing Node-RED flow
+
 1. Copy the prepared Node-RED flow into the your Node-RED instance
 2. Open the file **XXXXX** in GitHub and all select the the content into the clipboard
 3. Inside Node-RED select **Menu->Import->Clipboard**

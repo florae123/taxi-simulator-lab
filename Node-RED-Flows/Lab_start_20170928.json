@@ -1,22 +1,22 @@
 [
     {
+        "id": "2914f39d.cc87fc",
+        "type": "tab",
+        "label": "Lab-Use IoT Information",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "206f3b93.f18df4",
         "type": "tab",
-        "label": "Taxi Simulation",
+        "label": "Configure-TaxiSimulation",
         "disabled": false,
         "info": ""
     },
     {
         "id": "7e62b24a.bb0f2c",
         "type": "tab",
-        "label": "Blob for ObjectStorage",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "2914f39d.cc87fc",
-        "type": "tab",
-        "label": "Use IoT Information",
+        "label": "Configure-Blob for ObjectStorage",
         "disabled": false,
         "info": ""
     },
@@ -506,8 +506,8 @@
         },
         "payload": "",
         "topic": "",
-        "x": 131,
-        "y": 347,
+        "x": 129,
+        "y": 289,
         "wires": [
             [
                 "238a9bbb.383c84",
@@ -526,8 +526,8 @@
         "func": "flow.set(\"orgid\", msg.payload.orgid);\nflow.set(\"instances\", msg.payload.taxi_num);\nflow.set(\"username\", msg.payload.username);\nflow.set(\"password\", msg.payload.password);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 380,
-        "y": 346,
+        "x": 378,
+        "y": 288,
         "wires": [
             [
                 "ef74b4ad.3d7778"
@@ -542,8 +542,8 @@
         "func": "var orgid = flow.get(\"orgid\");\n\nmsg = {\n    url:\"https://\" + orgid + \".internetofthings.ibmcloud.com/api/v0002/device/types\",\n    payload: {\"id\":\"Taxi\"},\n    headers:{\n        \"Accept\":\"application/json\",\n        \"Content-type\":\"application/json\"\n    }\n};\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 625,
-        "y": 348,
+        "x": 623,
+        "y": 290,
         "wires": [
             [
                 "4d02f772.ae2248"
@@ -559,8 +559,8 @@
         "ret": "txt",
         "url": "",
         "tls": "",
-        "x": 1050,
-        "y": 353,
+        "x": 1048,
+        "y": 295,
         "wires": [
             [
                 "e623742.13def88"
@@ -575,8 +575,8 @@
         "active": false,
         "console": "false",
         "complete": "true",
-        "x": 1055,
-        "y": 291,
+        "x": 1053,
+        "y": 233,
         "wires": []
     },
     {
@@ -587,8 +587,8 @@
         "func": "var username = flow.get(\"username\");\nvar password = flow.get(\"password\");\nvar auth = 'Basic ' + new Buffer(username + ':' + password).toString('base64');\nmsg.headers.Authorization = auth;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 814,
-        "y": 349,
+        "x": 812,
+        "y": 291,
         "wires": [
             [
                 "5ed63926.919358",
@@ -607,8 +607,8 @@
         "repeat": "",
         "crontab": "",
         "once": false,
-        "x": 165,
-        "y": 61,
+        "x": 214,
+        "y": 123,
         "wires": [
             [
                 "a42ff014.e9d43",
@@ -632,8 +632,8 @@
         "formattype": "1",
         "mode": "1",
         "osconfig": "fb06e724.103238",
-        "x": 524,
-        "y": 61,
+        "x": 554,
+        "y": 123,
         "wires": [
             [
                 "1594fae4.ab8d05"
@@ -648,8 +648,8 @@
         "active": true,
         "console": "false",
         "complete": "true",
-        "x": 844,
-        "y": 60,
+        "x": 874,
+        "y": 122,
         "wires": []
     },
     {
@@ -660,8 +660,8 @@
         "active": true,
         "console": "false",
         "complete": "true",
-        "x": 447,
-        "y": 205,
+        "x": 500,
+        "y": 270,
         "wires": []
     },
     {
@@ -829,8 +829,8 @@
         "active": false,
         "console": "false",
         "complete": "true",
-        "x": 426,
-        "y": 1134,
+        "x": 704,
+        "y": 1142,
         "wires": []
     },
     {
@@ -860,8 +860,8 @@
         "qos": 0,
         "name": "IBM IoT",
         "service": "registered",
-        "x": 152,
-        "y": 1030,
+        "x": 100,
+        "y": 1020,
         "wires": []
     },
     {
@@ -893,8 +893,8 @@
         "formattype": "1",
         "mode": "1",
         "osconfig": "fb06e724.103238",
-        "x": 582,
-        "y": 1180,
+        "x": 860,
+        "y": 1188,
         "wires": [
             [
                 "6c4a8a1.1721574"
@@ -909,8 +909,8 @@
         "active": false,
         "console": "false",
         "complete": "true",
-        "x": 713,
-        "y": 1180,
+        "x": 991,
+        "y": 1188,
         "wires": []
     },
     {
@@ -928,8 +928,8 @@
         "accumulate": false,
         "timeout": "",
         "count": "2000",
-        "x": 290,
-        "y": 1179,
+        "x": 568,
+        "y": 1187,
         "wires": [
             [
                 "48ccd5f.9b84e2c",
@@ -945,8 +945,8 @@
         "func": "var tsamp = new Date();\nvar deviceTemplate = '{'+\n    '\"orgId\":\"'+        flow.get(\"orgid\")+'\",'+\n    '\"deviceType\":\"'+   msg.deviceType+'\",'+\n    '\"deviceId\":\"'+     msg.deviceId+'\",'\n    '\"eventType\":\"'+    msg.eventOrCommandType+'\",'+\n    '\"timestamp\":\"'+    tsamp + '\",'+\n    '\"sensorData\":{'+\n        '\"location\":{'+\n            '\"longitude\":\"'+    msg.payload.d.longitude+'\",'+\n            '\"latitude\":\"'+     msg.payload.d.latitude+'\"'+\n        '},'+\n        '\"velocity\":\"'+ msg.payload.d.velocity+'\"'+\n    '}}';\nmsg.payload = deviceTemplate;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 149,
-        "y": 1179,
+        "x": 427,
+        "y": 1187,
         "wires": [
             [
                 "dc658ff4.5dd8",
@@ -962,8 +962,8 @@
         "func": "msg.payload = Buffer.from(msg.payload,'base64');\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 427,
-        "y": 1179,
+        "x": 705,
+        "y": 1187,
         "wires": [
             [
                 "6359770c.c80048"
@@ -978,8 +978,8 @@
         "active": false,
         "console": "false",
         "complete": "true",
-        "x": 578,
-        "y": 1132,
+        "x": 856,
+        "y": 1140,
         "wires": []
     },
     {
@@ -990,8 +990,8 @@
         "active": false,
         "console": "false",
         "complete": "true",
-        "x": 284,
-        "y": 1131,
+        "x": 562,
+        "y": 1139,
         "wires": []
     },
     {
@@ -999,8 +999,8 @@
         "type": "messagehub",
         "z": "7e62b24a.bb0f2c",
         "topic": "taxi",
-        "x": 429,
-        "y": 140,
+        "x": 494,
+        "y": 202,
         "wires": []
     },
     {
@@ -1010,7 +1010,7 @@
         "name": "Create Virtual Taxi's",
         "info": "",
         "x": 109.5,
-        "y": 41,
+        "y": 99,
         "wires": []
     },
     {
@@ -1031,8 +1031,8 @@
         "func": "var instances = flow.get(\"instances\");\n\nvar deviceMsgs = []\nfor(var i = 0; i < instances; i++){\n    var deviceId;\n    var authToken;\n    \n    if(i < 9) {\n        deviceId = \"Taxi0\" + (i+1);\n        authToken = \"12345678\";\n    } else {\n        deviceId = \"Taxi\" + (i+1);\n        authToken = \"12345678\";\n    }\n    deviceMsgs.push({payload: {deviceId: deviceId,\n                               authToken: authToken}});\n}\nreturn [deviceMsgs];\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 377.5,
-        "y": 512,
+        "x": 375.5,
+        "y": 454,
         "wires": [
             [
                 "136c2617.83619a"
@@ -1047,8 +1047,8 @@
         "deviceId": "",
         "schema": "59fde317.23c1ac",
         "outputs": 1,
-        "x": 555.5,
-        "y": 511,
+        "x": 553.5,
+        "y": 453,
         "wires": [
             [
                 "d23d8849.8d1748",
@@ -1073,8 +1073,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 134.5,
-        "y": 511,
+        "x": 132.5,
+        "y": 453,
         "wires": [
             [
                 "3edf280.e2554d8"
@@ -1092,8 +1092,8 @@
         "repeat": "",
         "crontab": "",
         "once": false,
-        "x": 138.5,
-        "y": 632,
+        "x": 143.5,
+        "y": 614,
         "wires": [
             [
                 "748eeb47.667054"
@@ -1108,8 +1108,8 @@
         "active": false,
         "console": "false",
         "complete": "true",
-        "x": 775.5,
-        "y": 512,
+        "x": 773.5,
+        "y": 454,
         "wires": []
     },
     {
@@ -1120,8 +1120,8 @@
         "func": "flow.set(\"instances\", msg.payload.instances);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 137.5,
-        "y": 685,
+        "x": 163.5,
+        "y": 661,
         "wires": [
             [
                 "3edf280.e2554d8"
@@ -1175,8 +1175,8 @@
         "z": "206f3b93.f18df4",
         "name": "Make a note of your IoT  Organization and API Key",
         "info": "Watson IoT:\n============\nOrganization: 1h4fqf\nAPI Key:    a-1h4fqf-twkonxv5oo\nAPI Token:  JH+0xANGIYdQG&SdXI",
-        "x": 207.5,
-        "y": 110,
+        "x": 218.5,
+        "y": 229,
         "wires": []
     },
     {
@@ -1185,8 +1185,8 @@
         "z": "206f3b93.f18df4",
         "name": "Create a Object Storage Buffer",
         "info": "",
-        "x": 212.5,
-        "y": 1090,
+        "x": 490.5,
+        "y": 1098,
         "wires": []
     },
     {
@@ -1218,8 +1218,8 @@
         "label": "Start Taxi - Main",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1020.5,
-        "y": 558,
+        "x": 1014.5,
+        "y": 504,
         "wires": []
     },
     {
@@ -1246,8 +1246,8 @@
         "func": "if (msg.payload.deviceId != undefined){\n   msg.payload = msg.payload.deviceId;\n} else {\n    msg.payload = \"no device information\"\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 789,
-        "y": 558,
+        "x": 783,
+        "y": 504,
         "wires": [
             [
                 "1e19dc48.83fbb4"
@@ -1262,8 +1262,8 @@
         "group": "cf80b3c2.1088e",
         "voice": "7",
         "always": true,
-        "x": 1065.5,
-        "y": 615,
+        "x": 1056.5,
+        "y": 547,
         "wires": []
     },
     {
@@ -1274,8 +1274,8 @@
         "func": "if (msg.payload.deviceId !== undefined){\n   msg.payload = \"Now I start the taxi with device ID \" + msg.payload.deviceId + \"!\";\n} else {\n    msg.payload = \"I have no device information!\"\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 819,
-        "y": 616,
+        "x": 810,
+        "y": 547,
         "wires": [
             [
                 "11abdf93.ba14e"
@@ -1293,8 +1293,8 @@
         "repeat": "",
         "crontab": "",
         "once": false,
-        "x": 158,
-        "y": 175,
+        "x": 156,
+        "y": 140,
         "wires": [
             [
                 "162ccb1b.956ef5"
@@ -1309,8 +1309,8 @@
         "active": false,
         "console": "false",
         "complete": "true",
-        "x": 1050,
-        "y": 404,
+        "x": 1048,
+        "y": 346,
         "wires": []
     },
     {
@@ -1321,8 +1321,8 @@
         "func": "/* Watson IoT:\n   ============\n   Organization: 1h4fqf\n   API Key  :    a-1h4fqf-twkonxv5oo\n   API Token:    JH+0xANGIYdQG&SdXI\n*/\n\nflow.set(\"orgid\", \"1h4fqf\");\nflow.set(\"instances\",\"2\");\nflow.set(\"username\", \"a-1h4fqf-twkonxv5oo\");\nflow.set(\"password\", \"JH+0xANGIYdQG&SdXI\");\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 181,
-        "y": 261,
+        "x": 178,
+        "y": 187,
         "wires": [
             [
                 "ef74b4ad.3d7778",
@@ -1336,8 +1336,8 @@
         "z": "206f3b93.f18df4",
         "name": "Set the Auth for the IoT- APP-Key",
         "info": "",
-        "x": 214,
-        "y": 986,
+        "x": 162,
+        "y": 981,
         "wires": []
     },
     {
@@ -1346,8 +1346,8 @@
         "z": "206f3b93.f18df4",
         "name": "Test the creation of Devices",
         "info": "",
-        "x": 149.5,
-        "y": 584,
+        "x": 155.5,
+        "y": 565,
         "wires": []
     },
     {
@@ -1365,8 +1365,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 138,
-        "y": 434,
+        "x": 136,
+        "y": 376,
         "wires": [
             [
                 "68946a3b.030464"
@@ -1381,8 +1381,8 @@
         "func": "var instances = flow.get(\"instances\");\nvar result = [];\nfor(var i = 0; i < instances; i++){\n    var deviceId;\n    var metadata;\n    var authToken;\n    if(i < 9) {\n        deviceId  = \"Taxi0\" + (i+1);\n        metadata  = {};\n        authToken = \"12345678\";\n        deviceInfo = {\"serialNumber\": \"TAXI_SIM_0X0\"+i+1, \"manufacturer\": \"Sample Taxi\"};\n    } else {\n        deviceId = \"Taxi\" + (i+1);\n        metadata  = {};\n        authToken = \"12345678\";\n        deviceInfo = {\"serialNumber\": \"TAXI_SIM_0X\"+i+1, \"manufacturer\": \"Sample Taxi\"};\n    }\n    result.push({payload:{deviceId:deviceId,\n                          metadata:metadata,\n                          authToken:authToken,\n                          deviceInfo:deviceInfo\n    }});\n}\nreturn [result];",
         "outputs": 1,
         "noerr": 0,
-        "x": 364,
-        "y": 433,
+        "x": 362,
+        "y": 375,
         "wires": [
             [
                 "7e490a69.90d134"
@@ -1397,8 +1397,8 @@
         "func": "var payload = msg.payload;\nvar orgid = flow.get(\"orgid\");\n\nmsg = {\n    url:\"https://\" + orgid + \".internetofthings.ibmcloud.com/api/v0002/device/types/Taxi/devices\",\n    payload: payload,\n    headers:{\n        \"Accept\":\"application/json\",\n        \"Content-type\":\"application/json\"\n    }\n};\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 618,
-        "y": 433,
+        "x": 616,
+        "y": 375,
         "wires": [
             [
                 "4d02f772.ae2248",
@@ -1550,121 +1550,9 @@
         "label": "Velocity current value Taxi02",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 737,
-        "y": 1061,
+        "x": 742,
+        "y": 1067,
         "wires": []
-    },
-    {
-        "id": "44837f7d.d5503",
-        "type": "ibmiot in",
-        "z": "2914f39d.cc87fc",
-        "authentication": "boundService",
-        "apiKey": "d1639739.3bca48",
-        "inputType": "evt",
-        "deviceId": "Taxi01",
-        "applicationId": "",
-        "deviceType": "Taxi",
-        "eventType": "update",
-        "commandType": "",
-        "format": "json",
-        "name": "IBM IoT",
-        "service": "registered",
-        "allDevices": "",
-        "allApplications": "",
-        "allDeviceTypes": false,
-        "allEvents": false,
-        "allCommands": "",
-        "allFormats": "",
-        "qos": 0,
-        "x": 135.5,
-        "y": 216,
-        "wires": [
-            [
-                "36dce91a.24f6a6",
-                "c5d0b2fb.6374"
-            ]
-        ]
-    },
-    {
-        "id": "36dce91a.24f6a6",
-        "type": "debug",
-        "z": "2914f39d.cc87fc",
-        "name": "",
-        "active": false,
-        "console": "false",
-        "complete": "true",
-        "x": 313.5,
-        "y": 137,
-        "wires": []
-    },
-    {
-        "id": "c5d0b2fb.6374",
-        "type": "switch",
-        "z": "2914f39d.cc87fc",
-        "name": "Check velocity",
-        "property": "payload.d.velocity",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "gt",
-                "v": "25",
-                "vt": "num"
-            },
-            {
-                "t": "lt",
-                "v": "25",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "outputs": 2,
-        "x": 327.5,
-        "y": 216,
-        "wires": [
-            [
-                "62654789.84c308",
-                "89df3d9d.c1a8e",
-                "9402516b.0ba6"
-            ],
-            [
-                "50bee571.aad88c",
-                "89df3d9d.c1a8e",
-                "9402516b.0ba6"
-            ]
-        ]
-    },
-    {
-        "id": "50bee571.aad88c",
-        "type": "function",
-        "z": "2914f39d.cc87fc",
-        "name": "safe",
-        "func": "msg.payload = \"The velocity is \" + msg.payload.d.velocity + \".\";\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 540.5,
-        "y": 289,
-        "wires": [
-            [
-                "f32fb836.482198"
-            ]
-        ]
-    },
-    {
-        "id": "62654789.84c308",
-        "type": "function",
-        "z": "2914f39d.cc87fc",
-        "name": "danger",
-        "func": "msg.payload = \"The velocity of \" + msg.payload.d.velocity + \" of the Taxi is to high!\";\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 547.5,
-        "y": 162,
-        "wires": [
-            [
-                "4b46f9cc.bb0ec8",
-                "f32fb836.482198"
-            ]
-        ]
     },
     {
         "id": "4b46f9cc.bb0ec8",
@@ -1678,8 +1566,8 @@
         "cancel": "",
         "topic": "",
         "name": "",
-        "x": 744.5,
-        "y": 162,
+        "x": 725.5,
+        "y": 223,
         "wires": []
     },
     {
@@ -1704,8 +1592,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 728.5,
-        "y": 221,
+        "x": 709.5,
+        "y": 282,
         "wires": []
     },
     {
@@ -1720,36 +1608,38 @@
         "label": "Current Velocity",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 726.5,
-        "y": 290,
+        "x": 707.5,
+        "y": 351,
         "wires": []
     },
     {
-        "id": "9402516b.0ba6",
-        "type": "debug",
+        "id": "8cc6c561.734ca8",
+        "type": "comment",
         "z": "2914f39d.cc87fc",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "false",
-        "x": 560.5,
-        "y": 113,
+        "name": "Build Node-RED Flow",
+        "info": "",
+        "x": 164.5,
+        "y": 59,
         "wires": []
     },
     {
-        "id": "89df3d9d.c1a8e",
-        "type": "function",
-        "z": "2914f39d.cc87fc",
-        "name": "all",
-        "func": "msg.payload = msg.payload.d.velocity;\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 538,
-        "y": 220,
-        "wires": [
-            [
-                "f3145bb4.9c8c28"
-            ]
-        ]
+        "id": "2808a0c9.c3dad",
+        "type": "comment",
+        "z": "206f3b93.f18df4",
+        "name": "Verify Node-RED flow",
+        "info": "",
+        "x": 117,
+        "y": 38,
+        "wires": []
+    },
+    {
+        "id": "5c25f5e8.6d7abc",
+        "type": "comment",
+        "z": "7e62b24a.bb0f2c",
+        "name": "Verify Node-RED flow",
+        "info": "",
+        "x": 127,
+        "y": 47,
+        "wires": []
     }
 ]
