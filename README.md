@@ -153,7 +153,7 @@ Create a app API-Key inside the Watson IoT Service and insert the information in
 ![01_Message_Hub_01](images/01_Message_Hub_01.jpg)
 
 2. Open the MessageHub Service, create one service credential (1) and copy the credential into the clipboard (4).
-![01_Message_Hub_01](images/02_Message_Hub_02.jpg)
+![02_Message_Hub_02](images/02_Message_Hub_02.jpg)
 
 # 3 Use Watson IoT input to Node-RED
 
