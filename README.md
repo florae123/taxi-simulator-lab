@@ -122,18 +122,17 @@ Create a app API-Key inside the Watson IoT Service and insert the information in
 
 4. Now copy and paste API Key and Authentication Token into  the Node-RED flow in Tab **Configure-TaxiSimulation**, by open the function node **set predefined config for Watson IoT** and replace the existing **API Key** and **API Token** with your value. Use **API Key** for **Username** and **API Token** for **Password**.
 ```
-/* Watson IoT:
-   ============
-   Organization: XXXX
-   API Key  :    a-XXXX-twkonxv5oo
-   API Token:    XX+0xANGIYdQG&SdXI
-*/
-
-flow.set("orgid", "XXXX");
-flow.set("instances","2");
-flow.set("username", "a-XXXX-twkonxv5oo");
-flow.set("password", "XX+0xANGIYdQG&SdXI");
-return msg
+      /* Watson IoT:
+         ============
+         Organization: XXXX
+         API Key  :    a-XXXX-twkonxv5oo
+         API Token:    XX+0xANGIYdQG&SdXI
+      */
+      flow.set("orgid", "XXXX");
+      flow.set("instances","2");
+      flow.set("username", "a-XXXX-twkonxv5oo");
+      flow.set("password", "XX+0xANGIYdQG&SdXI");
+      return msg
 ```
 
 5. The Organization ID you can find in the right upper corner of the Watson IoT WebPage.
