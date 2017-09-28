@@ -5,6 +5,10 @@ In this Lab you will create a **Taxi-Simulartor** for IoT. This Taxi-Simulator w
 The objective that you will get a basic understanding of the IBM IoT and how
 customize your own flow in Node-RED, by using the given IoT Data to display in your Node-RED Dashboard UI.
 
+**Here are the base UseCases of the UI**
+
+![01_basic_usecases](images/01_basic_usecases.jpg)
+
 **Functionality of the existing Node-RED flow**
 
 1. With the taxi-simulator you can create different Taxi devices inside the Watson IoT Platform.
@@ -115,7 +119,14 @@ In the part of the Lab you will setup and configure the environment, we will use
 
 ## 2.3 Configure the Watson IoT inside the Node-RED Taxi-Simulation Tab
 
-Create a app API-Key inside the Watson IoT Service and insert the information inside the existing Node-RED flow.
+With the Taxi-Simulation Tab you have following functionality.
+
+1. With the taxi-simulator you can create different Taxi devices inside the Watson IoT Platform.
+2. You can choose the count of the taxis you want to create.
+3. A created taxi will simulate speed and geolocation and the created data will be stored in a database.
+4. The flow contains a dashboard UI
+
+Now you will create a app API-Key inside the Watson IoT Service and insert the information inside the existing Node-RED flow.
 
 1. Open the existing Watson IoT Service and press launch
 ![Watson_IoT_open](images/01_Watson_IoT_open.jpg)
@@ -149,13 +160,24 @@ Create a app API-Key inside the Watson IoT Service and insert the information in
 
 ## 2.4 Configure the MessageHub Node inside the Node-RED Configure-Blob for ObjectStorage Tab
 
+In this tab you can create a sample data record, with will be stored in the ObjectStorage database.
+We need to insert the credential into the node configuration.
+
 1. Open the MessageHub node
 ![01_Message_Hub_01](images/01_Message_Hub_01.jpg)
 
 2. Open the MessageHub Service, create one service credential (1) and copy the credential into the clipboard (4).
 ![02_Message_Hub_02](images/02_Message_Hub_02.jpg)
 
+3. Copy the credentials into the open the MessageHub node and press **OK**.
+
+4. Press **Deploy** in the right upper corner of the Node-RED Editor page.
+
 # 3 Use Watson IoT input to Node-RED
+
+**Create your own Node-RED flow**
+* Use Watson IoT as input in your flow
+* Use the Node-RED for implementing some logic and UI
 
 0. You will start with this flow                                           
 ![Node-RED start with own flow](12_Node-RED_Start_own_flow.jpg)
