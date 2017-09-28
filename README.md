@@ -147,8 +147,13 @@ Create a app API-Key inside the Watson IoT Service and insert the information in
 
 6. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
+## 2.4 Configure the MessageHub Node inside the Node-RED Configure-Blob for ObjectStorage Tab
 
-2. Insert the application token into the IoT node inside the Node-RED flow
+1. Open the MessageHub node
+![01_Message_Hub_01](images/01_Message_Hub_01.jpg)
+
+2. Open the MessageHub Service, create one service credential (1) and copy the credential into the clipboard (4).
+![01_Message_Hub_01](images/02_Message_Hub_02.jpg)
 
 # 3 Use Watson IoT input to Node-RED
 
