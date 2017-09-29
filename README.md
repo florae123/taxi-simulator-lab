@@ -36,12 +36,12 @@ customize your own flow in Node-RED, by using the given IoT Data to display in y
 * The [Watson IoT Service](https://console.bluemix.net/catalog/services/internet-of-things-platform?env_id=ibm%3Ayp%3Aus-south)
 * The [Object Store Database](https://console.bluemix.net/catalog/services/Object-Storage?env_id=ibm%3Ayp%3Aus-south)
 * The [Message Hub](https://console.bluemix.net/catalog/?context=services&app=bdd3e76c-09b7-47a6-8515-50c7e6b477e9&env_id=ibm%3Ayp%3Aeu-gb&search=Message%20Hub)
+
 ---
 ## 1. Setup the needed application and services
 
 In the part of the Lab you will setup and configure the environment, we will use for your **Taxi-Simulartor**.
 
----
 ### 1.1 Setup and configure Node-RED
 
 1. Logon to your Bluemix Account and search in catalog for Node-RED. You will find the **Node-RED Boiler Template** and click on the icon.
@@ -71,6 +71,7 @@ In the part of the Lab you will setup and configure the environment, we will use
 ---
 ### 1.2 Create and bind the remaining needed Bluemix services
 
+---
 **Watson IoT and MessageHub**
 
 1. Go back to your bluemix application and select on the left hand side **connections** and press **connect new**.
@@ -84,6 +85,7 @@ In the part of the Lab you will setup and configure the environment, we will use
 
 4. Repeat the steps 1 to 3 for the Service **MessageHub**
 
+---
 **Cloud object storage**
 
 1. Now open the Bluemix catalog directly.
@@ -129,6 +131,7 @@ Inside the **Taxi-Simulation** Tab you have following functionality:
 3. A created taxi will simulate speed and geolocation and the created data will be stored in a database.
 4. The flow contains a dashboard UI
 
+---
 ## 2.3.1  Watson IoT Service and Node-REG configuration
 Now you will create a app API-Key inside the Watson IoT Service and insert the information inside the existing Node-RED flow.
 
@@ -162,6 +165,7 @@ Now you will create a app API-Key inside the Watson IoT Service and insert the i
 
 6. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
+---
 ## 2.4 Configure the MessageHub Node inside the Node-RED Configure-Blob for ObjectStorage Tab
 
 In this tab you can create a sample data record, with will be stored in the ObjectStorage database.
@@ -177,6 +181,7 @@ We need to insert the credential into the node configuration.
 
 4. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
+---
 # 3. Use Watson IoT input to Node-RED
 
 **Create your own Node-RED flow**
