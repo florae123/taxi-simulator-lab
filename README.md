@@ -26,7 +26,7 @@ customize your own flow in Node-RED, by using the given IoT Data to display in y
 - Start and stop simulation
 - Observe the first simulated taxi and if the speeding is to high get a notification. (This will be your task to implement)
 
-**This Hands-on Lab Contains the following steps**
+**The Lab contains the following steps**
 
 *a) Setup:*
 * A simulator for Taxis, which do sending their speed and location information.
@@ -76,9 +76,8 @@ In the part of the Lab you will setup and configure the environment, we will use
 ![Node-RED_Select_Manage-Palette](images/08_Node-RED_List_of_installed_nodes.jpg)
 
 ---
-### 1.2 Create and bind the remaining needed Bluemix services
+### 1.2 Create and bind the needed Bluemix services
 
----
 **Watson IoT and MessageHub**
 
 1. Go back to your bluemix application and select on the left hand side **connections** and press **connect new**.
@@ -112,7 +111,7 @@ In the part of the Lab you will setup and configure the environment, we will use
 ![Bluemix-services_connected_services](images/07_Bluemix_services_connected_services.jpg)
 
 ---
-# 2. Configure the needed services and apply changes to the Node-RED flow
+# 2. Configure the  services and do changes in the Node-RED flow
 
 ---
 ## 2.1 Import existing Node-RED flow
