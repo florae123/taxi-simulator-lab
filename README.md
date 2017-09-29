@@ -29,18 +29,19 @@ customize your own flow in Node-RED, by using the given IoT Data to display in y
 * Use Watson IoT as input in your flow
 * Use the Node-RED for implementing some logic and UI
 
-**In the Hands-on Lab  you will use in IBM Bluemix:**
+**What you will use in IBM Bluemix?**
 
 * The **Node-RED Starter** _Boiler Template_ with contains a **Cloudant DB** and a **Node.JS Server**.
 * You will add additional nodes into the Node-RED instance [Node-RED Dashboard Node](https://flows.nodered.org/node/node-red-dashboard), [Node-RED Virtual IoT Device Node](https://www.npmjs.com/package/node-red-contrib-iot-virtual-device), [Node-RED Objectstore](http://flows.nodered.org/node/node-red-contrib-objectstore) and [Node-RED MessageHub](https://flows.nodered.org/node/node-red-contrib-messagehub)
 * The [Watson IoT Service](https://console.bluemix.net/catalog/services/internet-of-things-platform?env_id=ibm%3Ayp%3Aus-south)
 * The [Object Store Database](https://console.bluemix.net/catalog/services/Object-Storage?env_id=ibm%3Ayp%3Aus-south)
 * The [Message Hub](https://console.bluemix.net/catalog/?context=services&app=bdd3e76c-09b7-47a6-8515-50c7e6b477e9&env_id=ibm%3Ayp%3Aeu-gb&search=Message%20Hub)
+---
+## 1. Setup the needed application and services
 
-# 1 Setup the needed Application and services
+In the part of the Lab you will setup and configure the environment, we will use for your **Taxi-Simulartor**.
 
-In the part of the Lab you will setup and configure the environment, we will use for you Taxi-Simulartor.
-
+---
 ### 1.1 Setup and configure Node-RED
 
 1. Logon to your Bluemix Account and search in catalog for Node-RED. You will find the **Node-RED Boiler Template** and click on the icon.
@@ -67,6 +68,7 @@ In the part of the Lab you will setup and configure the environment, we will use
 8. After the installation verify that following sections for the installed nodes will appear on the left hand side.
 ![Node-RED_Select_Manage-Palette](images/08_Node-RED_List_of_installed_nodes.jpg)
 
+---
 ### 1.2 Create and bind the remaining needed Bluemix services
 
 **Watson IoT and MessageHub**
@@ -100,8 +102,10 @@ In the part of the Lab you will setup and configure the environment, we will use
 6. Alter this steps have connected services look like in the following picture. In my case I have a different name for the **cloud object storage** service.                               
 ![Bluemix-services_connected_services](images/07_Bluemix_services_connected_services.jpg)
 
-# 2 Configure the needed services and apply changes to the Node-RED flow
+---
+# 2. Configure the needed services and apply changes to the Node-RED flow
 
+---
 ## 2.1 Import existing Node-RED flow
 
 **Copy the prepared Node-RED flow into the your Node-RED instance**
@@ -116,16 +120,16 @@ In the part of the Lab you will setup and configure the environment, we will use
 
 4. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
-
+---
 ## 2.3 Configure the Watson IoT inside the Node-RED Taxi-Simulation Tab
-
-With the Taxi-Simulation Tab you have following functionality.
+Inside the **Taxi-Simulation** Tab you have following functionality:
 
 1. With the taxi-simulator you can create different Taxi devices inside the Watson IoT Platform.
 2. You can choose the count of the taxis you want to create.
 3. A created taxi will simulate speed and geolocation and the created data will be stored in a database.
 4. The flow contains a dashboard UI
 
+## 2.3.1  Watson IoT Service and Node-REG configuration
 Now you will create a app API-Key inside the Watson IoT Service and insert the information inside the existing Node-RED flow.
 
 1. Open the existing Watson IoT Service and press launch
@@ -173,7 +177,7 @@ We need to insert the credential into the node configuration.
 
 4. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
-# 3 Use Watson IoT input to Node-RED
+# 3. Use Watson IoT input to Node-RED
 
 **Create your own Node-RED flow**
 * Use Watson IoT as input in your flow
@@ -218,43 +222,3 @@ We need to insert the credential into the node configuration.
   return msg;
 ```
 6. Press **Deploy** in the right upper corner of the Node-RED Editor page.
-
-# 4 Basic Git Command line instructions
-
-## 4.1 Git global setup
-
-```
-git config --global user.name "Thomas Südbröcker"
-git config --global user.email "thomas.suedbroecker.2@de.ibm.com"
-```
-
-## 4.2 Create a new repository
-
-```
-git clone git@git.ng.bluemix.net:thomas.suedbroecker.2/Bluemix-Hands-on-Workshop-IoT.git
-cd Bluemix-Hands-on-Workshop-IoT
-touch README.md
-git add README.md
-git commit -m "add README"
-git push -u origin master
-```
-
-## 4.3 Existing folder
-
-```
-cd existing_folder
-git init
-git remote add origin git@git.ng.bluemix.net:thomas.suedbroecker.2/Bluemix-Hands-on-Workshop-IoT.git
-git add .
-git commit -m "Initial commit"
-git push -u origin master
-```
-
-## Existing Git repository
-
-```
-cd existing_repo
-git remote add origin git@git.ng.bluemix.net:thomas.suedbroecker.2/Bluemix-Hands-on-Workshop-IoT.git
-git push -u origin --all
-git push -u origin --tags
-```

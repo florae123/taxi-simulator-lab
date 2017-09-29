@@ -576,7 +576,7 @@
         "console": "false",
         "complete": "true",
         "x": 1053,
-        "y": 233,
+        "y": 242,
         "wires": []
     },
     {
@@ -906,7 +906,7 @@
         "type": "debug",
         "z": "206f3b93.f18df4",
         "name": "",
-        "active": false,
+        "active": true,
         "console": "false",
         "complete": "true",
         "x": 991,
@@ -966,7 +966,8 @@
         "y": 1187,
         "wires": [
             [
-                "6359770c.c80048"
+                "6359770c.c80048",
+                "35b64214.c6469e"
             ]
         ]
     },
@@ -1576,8 +1577,8 @@
         "allCommands": "",
         "allFormats": "",
         "qos": 0,
-        "x": 116.5,
-        "y": 277,
+        "x": 111.5,
+        "y": 242,
         "wires": [
             [
                 "36dce91a.24f6a6",
@@ -1593,8 +1594,8 @@
         "active": false,
         "console": "false",
         "complete": "true",
-        "x": 294.5,
-        "y": 198,
+        "x": 289.5,
+        "y": 163,
         "wires": []
     },
     {
@@ -1618,8 +1619,8 @@
         ],
         "checkall": "true",
         "outputs": 2,
-        "x": 308.5,
-        "y": 277,
+        "x": 303.5,
+        "y": 242,
         "wires": [
             [
                 "62654789.84c308",
@@ -1641,8 +1642,8 @@
         "func": "msg.payload = \"The velocity is \" + msg.payload.d.velocity + \".\";\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 521.5,
-        "y": 350,
+        "x": 516.5,
+        "y": 315,
         "wires": [
             [
                 "f32fb836.482198"
@@ -1657,8 +1658,8 @@
         "func": "msg.payload = \"The velocity of \" + msg.payload.d.velocity + \" of the Taxi is to high!\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 528.5,
-        "y": 223,
+        "x": 523.5,
+        "y": 188,
         "wires": [
             [
                 "4b46f9cc.bb0ec8",
@@ -1678,8 +1679,8 @@
         "cancel": "",
         "topic": "",
         "name": "",
-        "x": 725.5,
-        "y": 223,
+        "x": 720.5,
+        "y": 188,
         "wires": []
     },
     {
@@ -1704,8 +1705,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 709.5,
-        "y": 282,
+        "x": 704.5,
+        "y": 247,
         "wires": []
     },
     {
@@ -1720,8 +1721,8 @@
         "label": "Current Velocity",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 707.5,
-        "y": 351,
+        "x": 702.5,
+        "y": 316,
         "wires": []
     },
     {
@@ -1732,8 +1733,8 @@
         "active": true,
         "console": "false",
         "complete": "false",
-        "x": 541.5,
-        "y": 174,
+        "x": 536.5,
+        "y": 139,
         "wires": []
     },
     {
@@ -1744,8 +1745,8 @@
         "func": "msg.payload = msg.payload.d.velocity;\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 519,
-        "y": 281,
+        "x": 514,
+        "y": 246,
         "wires": [
             [
                 "f3145bb4.9c8c28"
@@ -1759,7 +1760,7 @@
         "name": "Build Node-RED Flow",
         "info": "",
         "x": 164.5,
-        "y": 59,
+        "y": 69,
         "wires": []
     },
     {
