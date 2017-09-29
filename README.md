@@ -213,7 +213,7 @@ We need to insert the credential into the node configuration.
 4. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
 ---
-# 3. Use Watson IoT input to Node-RED
+# 3. Use the Watson IoT input to Node-RED
 
 **Create your own Node-RED flow**
 * Use Watson IoT as input in your flow
