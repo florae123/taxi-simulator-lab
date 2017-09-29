@@ -132,7 +132,7 @@ Inside the **Taxi-Simulation** Tab you have following functionality:
 4. The flow contains a dashboard UI
 
 ---
-## 2.3.1  Watson IoT Service and Node-REG configuration
+## 2.3.1  Watson IoT Service and Node-RED configuration
 Now you will create a app API-Key inside the Watson IoT Service and insert the information inside the existing Node-RED flow.
 
 1. Open the existing Watson IoT Service and press launch
@@ -166,7 +166,32 @@ Now you will create a app API-Key inside the Watson IoT Service and insert the i
 6. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
 ---
-## 2.4 Configure the MessageHub Node inside the Node-RED Configure-Blob for ObjectStorage Tab
+## 2.4 Configure the ObjectStorage Nodes inside the Node-RED Configure-Blob for ObjectStorage Tab and Taxi-Simulation Tab
+
+You have to configure the credentials of the ObjectStorage usage inside Node-RED
+
+1. Open the ObjectStorage node
+![01_ObjectStorage_01](images/01_ObjectStorage_01.jpg)
+
+2. Open the ObjectStorage Service in a other tab and create one service credential and name it **Taxi-Simulator-Credentials**.
+![02_ObjectStorage_02](images/02_ObjectStorage_02.jpg)
+
+3. Open the credentials with **view credentials**.
+
+4. Go back to your Node-RED Editor page and configure the credentials.
+![02_ObjectStorage_02](images/03_ObjectStorage_03.jpg)
+
+| ObjectStorage     | Node-RED Node     |
+| :------------- | :------------- |
+| projectId       | Tendant Id     |
+| User ID       | userId    |
+| User Name      | username   |
+| Password      | password   |
+
+
+
+---
+## 2.5 Configure the MessageHub Node inside the Node-RED Configure-Blob for ObjectStorage Tab
 
 In this tab you can create a sample data record, with will be stored in the ObjectStorage database.
 We need to insert the credential into the node configuration.

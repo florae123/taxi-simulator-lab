@@ -34,7 +34,7 @@
         "z": "",
         "name": "Configuration to access Watson IoT ",
         "tab": "884ee688.60c578",
-        "order": 1,
+        "order": 2,
         "disp": true,
         "width": "6"
     },
@@ -632,8 +632,8 @@
         "formattype": "1",
         "mode": "1",
         "osconfig": "fb06e724.103238",
-        "x": 554,
-        "y": 123,
+        "x": 598,
+        "y": 122,
         "wires": [
             [
                 "1594fae4.ab8d05"
@@ -648,8 +648,8 @@
         "active": true,
         "console": "false",
         "complete": "true",
-        "x": 874,
-        "y": 122,
+        "x": 984,
+        "y": 119,
         "wires": []
     },
     {
@@ -660,8 +660,8 @@
         "active": true,
         "console": "false",
         "complete": "true",
-        "x": 500,
-        "y": 270,
+        "x": 539,
+        "y": 265,
         "wires": []
     },
     {
@@ -756,15 +756,15 @@
         "id": "2a3ba1a5.ba696e",
         "type": "inject",
         "z": "206f3b93.f18df4",
-        "name": "",
+        "name": "Turn OFF simulation",
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
+        "payload": "true",
+        "payloadType": "bool",
         "repeat": "",
         "crontab": "",
         "once": false,
-        "x": 145,
-        "y": 1346,
+        "x": 135,
+        "y": 1395,
         "wires": [
             [
                 "d381a9be.e3bc18"
@@ -778,8 +778,8 @@
         "name": "Turn OFF",
         "deviceId": "",
         "schema": "59fde317.23c1ac",
-        "x": 445,
-        "y": 1346,
+        "x": 543,
+        "y": 1398,
         "wires": [
             []
         ]
@@ -792,8 +792,8 @@
         "func": "var instances = flow.get(\"instances\");\n\nvar deviceMsgs = []\nfor(var i = 0; i < instances; i++){\n    var deviceId;\n    if(i < 9) {\n        \n        deviceId = \"Taxi0\" + (i+1); \n    } else {\n        deviceId = \"Taxi\" + (i+1); \n    }\n    deviceMsgs.push({payload: {deviceId: deviceId}});\n}\nreturn [deviceMsgs];\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 295,
-        "y": 1346,
+        "x": 366,
+        "y": 1397,
         "wires": [
             [
                 "e7172c6e.aaa0e"
@@ -829,8 +829,8 @@
         "active": false,
         "console": "false",
         "complete": "true",
-        "x": 704,
-        "y": 1142,
+        "x": 918,
+        "y": 1196,
         "wires": []
     },
     {
@@ -860,8 +860,8 @@
         "qos": 0,
         "name": "IBM IoT",
         "service": "registered",
-        "x": 100,
-        "y": 1020,
+        "x": 102,
+        "y": 1023,
         "wires": []
     },
     {
@@ -872,8 +872,8 @@
         "func": "var max_gather = 60;\nvar tsamp = new Date();\nvar deviceTemplate = '{'+\n    '\"orgId\":\"'+        flow.get(\"orgid\")+'\",'+\n    '\"deviceType\":\"'+   msg.deviceType+'\",'+\n    '\"deviceId\":\"'+     msg.deviceId+'\",'\n    '\"eventType\":\"'+    msg.eventOrCommandType+'\",'+\n    '\"timestamp\":\"'+    tsamp + '\",'+\n    '\"sensorData\":{'+\n        '\"location\":{'+\n            '\"longitude\":\"'+    msg.payload.d.longitude+'\",'+\n            '\"latitude\":\"'+     msg.payload.d.latitude+'\"'+\n        '},'+\n        '\"velocity\":\"'+ msg.payload.d.velocity+'\"'+\n    '}}';\nvar d = [];\nvar device = global.get(msg.deviceId)||d;\nif(!device.hasOwnProperty('length')){\n    device = [];\n}\ndevice.push(deviceTemplate);\n\nif(device.length > max_gather){\n    device = device.join(\"\\n\");    // format gathered file of json data\n    msg.payload = device; \n    global.set(msg.deviceId,[]);      // reset\n    return msg;\n} else {\n    global.set(msg.deviceId,device);\n}\n\n\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 300,
-        "y": 1412,
+        "x": 364,
+        "y": 1443,
         "wires": [
             []
         ]
@@ -893,8 +893,8 @@
         "formattype": "1",
         "mode": "1",
         "osconfig": "fb06e724.103238",
-        "x": 860,
-        "y": 1188,
+        "x": 1076,
+        "y": 1244,
         "wires": [
             [
                 "6c4a8a1.1721574"
@@ -909,15 +909,15 @@
         "active": true,
         "console": "false",
         "complete": "true",
-        "x": 991,
-        "y": 1188,
+        "x": 1207,
+        "y": 1244,
         "wires": []
     },
     {
         "id": "dc658ff4.5dd8",
         "type": "join",
         "z": "206f3b93.f18df4",
-        "name": "",
+        "name": "Wait for 100 messages from Taxis",
         "mode": "custom",
         "build": "string",
         "property": "payload",
@@ -927,9 +927,9 @@
         "joinerType": "str",
         "accumulate": false,
         "timeout": "",
-        "count": "2000",
-        "x": 568,
-        "y": 1187,
+        "count": "100",
+        "x": 673,
+        "y": 1243,
         "wires": [
             [
                 "48ccd5f.9b84e2c",
@@ -945,12 +945,12 @@
         "func": "var tsamp = new Date();\nvar deviceTemplate = '{'+\n    '\"orgId\":\"'+        flow.get(\"orgid\")+'\",'+\n    '\"deviceType\":\"'+   msg.deviceType+'\",'+\n    '\"deviceId\":\"'+     msg.deviceId+'\",'\n    '\"eventType\":\"'+    msg.eventOrCommandType+'\",'+\n    '\"timestamp\":\"'+    tsamp + '\",'+\n    '\"sensorData\":{'+\n        '\"location\":{'+\n            '\"longitude\":\"'+    msg.payload.d.longitude+'\",'+\n            '\"latitude\":\"'+     msg.payload.d.latitude+'\"'+\n        '},'+\n        '\"velocity\":\"'+ msg.payload.d.velocity+'\"'+\n    '}}';\nmsg.payload = deviceTemplate;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 427,
-        "y": 1187,
+        "x": 428,
+        "y": 1243,
         "wires": [
             [
-                "dc658ff4.5dd8",
-                "f7cc2efb.8906f"
+                "f7cc2efb.8906f",
+                "dc658ff4.5dd8"
             ]
         ]
     },
@@ -962,8 +962,8 @@
         "func": "msg.payload = Buffer.from(msg.payload,'base64');\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 705,
-        "y": 1187,
+        "x": 921,
+        "y": 1243,
         "wires": [
             [
                 "6359770c.c80048",
@@ -976,11 +976,11 @@
         "type": "debug",
         "z": "206f3b93.f18df4",
         "name": "",
-        "active": false,
+        "active": true,
         "console": "false",
         "complete": "true",
-        "x": 856,
-        "y": 1140,
+        "x": 1072,
+        "y": 1196,
         "wires": []
     },
     {
@@ -988,11 +988,11 @@
         "type": "debug",
         "z": "206f3b93.f18df4",
         "name": "",
-        "active": false,
+        "active": true,
         "console": "false",
         "complete": "true",
-        "x": 562,
-        "y": 1139,
+        "x": 582,
+        "y": 1192,
         "wires": []
     },
     {
@@ -1000,7 +1000,7 @@
         "type": "messagehub",
         "z": "7e62b24a.bb0f2c",
         "topic": "taxi",
-        "x": 494,
+        "x": 524,
         "y": 202,
         "wires": []
     },
@@ -1010,8 +1010,8 @@
         "z": "206f3b93.f18df4",
         "name": "Create Virtual Taxi's",
         "info": "",
-        "x": 109.5,
-        "y": 99,
+        "x": 108.5,
+        "y": 80,
         "wires": []
     },
     {
@@ -1093,8 +1093,8 @@
         "repeat": "",
         "crontab": "",
         "once": false,
-        "x": 143.5,
-        "y": 614,
+        "x": 140.5,
+        "y": 633,
         "wires": [
             [
                 "748eeb47.667054"
@@ -1121,8 +1121,8 @@
         "func": "flow.set(\"instances\", msg.payload.instances);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 163.5,
-        "y": 661,
+        "x": 160.5,
+        "y": 680,
         "wires": [
             [
                 "3edf280.e2554d8"
@@ -1177,7 +1177,7 @@
         "name": "Make a note of your IoT  Organization and API Key",
         "info": "Watson IoT:\n============\nOrganization: 1h4fqf\nAPI Key:    a-1h4fqf-twkonxv5oo\nAPI Token:  JH+0xANGIYdQG&SdXI",
         "x": 218.5,
-        "y": 229,
+        "y": 247,
         "wires": []
     },
     {
@@ -1186,8 +1186,8 @@
         "z": "206f3b93.f18df4",
         "name": "Create a Object Storage Buffer",
         "info": "",
-        "x": 490.5,
-        "y": 1098,
+        "x": 495.5,
+        "y": 1144,
         "wires": []
     },
     {
@@ -1219,8 +1219,8 @@
         "label": "Start Taxi - Main",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1014.5,
-        "y": 504,
+        "x": 1018.5,
+        "y": 496,
         "wires": []
     },
     {
@@ -1247,8 +1247,8 @@
         "func": "if (msg.payload.deviceId != undefined){\n   msg.payload = msg.payload.deviceId;\n} else {\n    msg.payload = \"no device information\"\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 783,
-        "y": 504,
+        "x": 784,
+        "y": 495,
         "wires": [
             [
                 "1e19dc48.83fbb4"
@@ -1264,7 +1264,7 @@
         "voice": "7",
         "always": true,
         "x": 1056.5,
-        "y": 547,
+        "y": 540,
         "wires": []
     },
     {
@@ -1272,11 +1272,11 @@
         "type": "function",
         "z": "206f3b93.f18df4",
         "name": "Message device ID",
-        "func": "if (msg.payload.deviceId !== undefined){\n   msg.payload = \"Now I start the taxi with device ID \" + msg.payload.deviceId + \"!\";\n} else {\n    msg.payload = \"I have no device information!\"\n}\n\nreturn msg;",
+        "func": "if (msg.payload.deviceId !== undefined){\n   msg.payload = \"Now I start the taxi with device I D \" + msg.payload.deviceId + \"!\";\n} else {\n    msg.payload = \"I have no device information!\"\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 810,
-        "y": 547,
+        "y": 539,
         "wires": [
             [
                 "11abdf93.ba14e"
@@ -1294,8 +1294,8 @@
         "repeat": "",
         "crontab": "",
         "once": false,
-        "x": 156,
-        "y": 140,
+        "x": 150,
+        "y": 132,
         "wires": [
             [
                 "162ccb1b.956ef5"
@@ -1323,7 +1323,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 178,
-        "y": 187,
+        "y": 199,
         "wires": [
             [
                 "ef74b4ad.3d7778",
@@ -1337,7 +1337,7 @@
         "z": "206f3b93.f18df4",
         "name": "Set the Auth for the IoT- APP-Key",
         "info": "",
-        "x": 162,
+        "x": 169,
         "y": 981,
         "wires": []
     },
@@ -1347,8 +1347,8 @@
         "z": "206f3b93.f18df4",
         "name": "Test the creation of Devices",
         "info": "",
-        "x": 155.5,
-        "y": 565,
+        "x": 152.5,
+        "y": 584,
         "wires": []
     },
     {
@@ -1673,7 +1673,7 @@
         "z": "2914f39d.cc87fc",
         "position": "top right",
         "displayTime": "10",
-        "highlight": "",
+        "highlight": "#ff0000",
         "outputs": 0,
         "ok": "OK",
         "cancel": "",
@@ -1730,7 +1730,7 @@
         "type": "debug",
         "z": "2914f39d.cc87fc",
         "name": "",
-        "active": true,
+        "active": false,
         "console": "false",
         "complete": "false",
         "x": 536.5,
@@ -1781,6 +1781,66 @@
         "info": "",
         "x": 127,
         "y": 47,
+        "wires": []
+    },
+    {
+        "id": "9373f926.574278",
+        "type": "ui_button",
+        "z": "206f3b93.f18df4",
+        "name": "",
+        "group": "cf80b3c2.1088e",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Turn OFF Taxi-Simulation",
+        "color": "#000000",
+        "bgcolor": "#ff0000",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "",
+        "x": 132.5,
+        "y": 1343,
+        "wires": [
+            [
+                "d381a9be.e3bc18"
+            ]
+        ]
+    },
+    {
+        "id": "830e1888.d0edc8",
+        "type": "ui_button",
+        "z": "206f3b93.f18df4",
+        "name": "",
+        "group": "cf80b3c2.1088e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Turn ON  Taxi-Simulation (2 Taxis)",
+        "color": "#000000",
+        "bgcolor": "#32CD32",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "",
+        "x": 490,
+        "y": 134,
+        "wires": [
+            [
+                "162ccb1b.956ef5"
+            ]
+        ]
+    },
+    {
+        "id": "27d3bb68.5728f4",
+        "type": "comment",
+        "z": "206f3b93.f18df4",
+        "name": "Stop the Taxis",
+        "info": "",
+        "x": 93,
+        "y": 1296,
         "wires": []
     }
 ]
