@@ -19,9 +19,11 @@ customize your own flow in Node-RED, by using the given IoT Data to display in y
 1. With the taxi-simulator you can create different Taxi devices inside the Watson IoT Platform.
 2. You can choose the count of the taxis you want to create.
 3. A created taxi will simulate speed and geolocation and the created data will be stored in a database.
-4. The flow contains a dashboard UI which provides
+4. The flow contains a dashboard UI which provides following functionality:
+
 - Create sample IoT devices
 - Observe the speeding of the Taxis
+- Start and stop simulation
 - Observe the first simulated taxi and if the speeding is to high get a notification. (This will be your task to implement)
 
 **This Hands-on Lab Contains the following steps**
