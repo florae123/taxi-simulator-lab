@@ -1,6 +1,11 @@
 # Bluemix Hands-on Lab for IoT Creating a Taxi-Simulartor
 
-In this Lab you will create a **Taxi-Simulartor** for IoT. This Taxi-Simulator will create sample data for a Data Analytics part, in one of the following Labs of a Hands-on Workshop.
+In this Lab you will create a **Taxi-Simulartor** for IoT.
+This Taxi-Simulator will create sample data for a Data Analytics part, in one of the following Labs of a Hands-on Workshop.
+
+In the following image you can see the dependency of the two Labs.
+
+![01_Lab_overview](images/01_Lab_overview.jpg)
 
 The objective that you will get a basic understanding of the IBM IoT and how
 customize your own flow in Node-RED, by using the given IoT Data to display in your Node-RED Dashboard UI.
