@@ -7,7 +7,7 @@ In the following image you can see the dependency of the two Labs.
 
 ![01_Lab_overview](images/01_Lab_overview.jpg)
 
-The objective that you will get a basic understanding of the IBM IoT and how
+The objective of the first Lab is related to IoT, that means you will get a basic understanding of the IBM IoT and how
 customize your own flow in Node-RED, by using the given IoT Data to display in your Node-RED Dashboard UI.
 
 **Here are the base UseCases of the UI**
