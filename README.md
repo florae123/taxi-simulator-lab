@@ -1,6 +1,6 @@
-# Bluemix Hands-on Lab for IoT: Creating a Taxi-Simulartor
+# Bluemix Hands-on Lab for IoT: Creating a Taxi-Simulator
 
-In this Lab you will create a **Taxi-Simulartor** for IoT.
+In this Lab you will create a **Taxi-Simulator** for IoT.
 This Taxi-Simulator will create **sample data** for a Data Analytics part, in one of the following Labs of a Hands-on Workshop.
 
 In the following image you can see the dependency of the two Labs.
@@ -47,14 +47,14 @@ customize your own flow in Node-RED, by using the given IoT Data to display in y
 ---
 ## 1. Setup the needed application and services
 
-In the part of the Lab you will setup and configure the environment, we will use for your **Taxi-Simulartor**.
+In the part of the Lab you will setup and configure the environment, we will use for your **Taxi-Simulator**.
 
 ### 1.1 Setup and configure Node-RED
 
 1. Logon to your Bluemix Account and search in catalog for Node-RED. You will find the **Node-RED Boiler Template** and click on the icon.
 ![Node-RED Boiler Template](images/01_Node-RED_Starter.jpg)
 
-2. Now you can see the which application and services will be create. Give the application and route a name like **taxi-simulartor-[YOUR-UNIQUE-NAME]**. Here you can find the **Cloudant DB** and the **Node.JS Server** and press **create**.
+2. Now you can see the which application and services will be create. Give the application and route a name like **taxi-simulator-[YOUR-UNIQUE-NAME]**. Here you can find the **Cloudant DB** and the **Node.JS Server** and press **create**.
 ![Node-RED Boiler Template Configuration](images/02_Node-RED_Starter_Setup.jpg)
 
 3. After this step select the **Visit App URL** to get to the Running Node-RED instance on the Node.JS Server.
@@ -86,7 +86,7 @@ In the part of the Lab you will setup and configure the environment, we will use
 2. Search for the Watson IoT Service by insert in the catalog search **Internet of Things Platform** and press on the service.
 ![Bluemix-services_search](images/02_Bluemix_services_search.jpg)
 
-3. For the service name insert following name **taxi-simulartor-InternetOfThingsPlatform** and press **create**. Do **NOT** select restage for now.
+3. For the service name insert following name **taxi-simulator-InternetOfThingsPlatform** and press **create**. Do **NOT** select restage for now.
 ![Bluemix-services_add_iot](images/02_Bluemix_services_add_iot.jpg)
 
 4. Repeat the steps 1 to 3 for the Service **MessageHub**
