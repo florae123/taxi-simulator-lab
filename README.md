@@ -7,7 +7,7 @@ In the following image you can see the dependency of the two Labs.
 
 ![01_Lab_overview](images/01_Lab_overview.jpg)
 
-The objective of the first Lab is related to IoT, that means you will get a basic understanding of the IBM IoT and how
+The objective of the first Lab is related to IoT, that means you will get a basic understanding of the IBM IoT and how to
 customize your own flow in Node-RED, by using the given IoT Data to display in your Node-RED Dashboard UI.
 
 **Here are the base UseCases of the UI**
@@ -17,19 +17,19 @@ customize your own flow in Node-RED, by using the given IoT Data to display in y
 **Functionality of the existing Node-RED flow**
 
 1. With the taxi-simulator you can create different Taxi devices inside the Watson IoT Platform.
-2. You can choose the count of the taxis you want to create.
+2. You can choose the number of taxis you want to create.
 3. A created taxi will simulate speed and geolocation and the created data will be stored in a database.
-4. The flow contains a dashboard UI which provides following functionality:
+4. The flow contains a dashboard UI which provides the following functionality:
 
 - Create sample IoT devices
 - Observe the speeding of the Taxis
 - Start and stop simulation
-- Observe the first simulated taxi and if the speeding is to high get a notification. (This will be your task to implement)
+- Observe the first simulated taxi and if the speeding is too high get a notification. (This will be your task to implement.)
 
 **The Lab contains the following steps**
 
 *a) Setup:*
-* A simulator for Taxis, which do sending their speed and location information.
+* A simulator for Taxis, which is sending their speed and location information.
 * Setup the IBM Watson IoT
 
 *b) Create your own Node-RED flow*
@@ -39,7 +39,7 @@ customize your own flow in Node-RED, by using the given IoT Data to display in y
 **What you will use in IBM Bluemix?**
 
 * The **Node-RED Starter** _Boiler Template_ with contains a **Cloudant DB** and a **Node.JS Server**.
-* You will add additional nodes into the Node-RED instance [Node-RED Dashboard Node](https://flows.nodered.org/node/node-red-dashboard), [Node-RED Virtual IoT Device Node](https://www.npmjs.com/package/node-red-contrib-iot-virtual-device), [Node-RED Objectstore](http://flows.nodered.org/node/node-red-contrib-objectstore) and [Node-RED MessageHub](https://flows.nodered.org/node/node-red-contrib-messagehub)
+* You will add additional nodes into the Node-RED instance ([Node-RED Dashboard Node](https://flows.nodered.org/node/node-red-dashboard), [Node-RED Virtual IoT Device Node](https://www.npmjs.com/package/node-red-contrib-iot-virtual-device), [Node-RED Objectstore](http://flows.nodered.org/node/node-red-contrib-objectstore) and [Node-RED MessageHub](https://flows.nodered.org/node/node-red-contrib-messagehub))
 * The [Watson IoT Service](https://console.bluemix.net/catalog/services/internet-of-things-platform?env_id=ibm%3Ayp%3Aus-south)
 * The [Object Store Database](https://console.bluemix.net/catalog/services/Object-Storage?env_id=ibm%3Ayp%3Aus-south)
 * The [Message Hub](https://console.bluemix.net/catalog/?context=services&app=bdd3e76c-09b7-47a6-8515-50c7e6b477e9&env_id=ibm%3Ayp%3Aeu-gb&search=Message%20Hub)
@@ -47,18 +47,18 @@ customize your own flow in Node-RED, by using the given IoT Data to display in y
 ---
 ## 1. Setup the needed application and services
 
-In the part of the Lab you will setup and configure the environment, we will use for your **Taxi-Simulator**.
+In this part of the Lab you will setup and configure the environment we will use for your **Taxi-Simulator**.
 
 ### 1.1 Setup and configure Node-RED
 
-1. Logon to your Bluemix Account and search in catalog for Node-RED. You will find the **Node-RED Boiler Template** and click on the icon.
+1. Logon to your Bluemix Account and search the catalog for Node-RED. You will find the **Node-RED Boiler Template** and click on the icon.
 ![Node-RED Boiler Template](images/01_Node-RED_Starter.jpg)
 
-2. Now you can see the which application and services will be create. Give the application and route a name like **taxi-simulator-[YOUR-UNIQUE-NAME]**. Here you can find the **Cloudant DB** and the **Node.JS Server** and press **create**.
-![Node-RED Boiler Template Configuration](images/02_Node-RED_Starter_Setup.jpg)
+2. Now you can see which application and services will be created. Give the application and route a name like **taxi-simulator-[YOUR-UNIQUE-NAME]**. Here you can find the **Cloudant DB** and the **Node.JS Server** and press **create**.
+![Node-RED Boiler Template Configuration](images/02_Node-RED-Starter_Setup.jpg)
 
-3. After this step select the **Visit App URL** to get to the Running Node-RED instance on the Node.JS Server.
-![Node-RED Boiler Template Visit URL](images/03_Node-RED_Starter-visit-URL.jpg)
+3. After this step select **Visit App URL** to get to the Running Node-RED instance on the Node.JS Server.
+![Node-RED Boiler Template Visit URL](images/03_Node-RED-Starter-visit-URL.jpg)
 
 4. Now just **follow the steps in the wizard** to do the basic configuration of the Node-RED instance.
 ![Node-RED Boiler Template Follow the steps in the wizard](images/04_Node-RED_Follow_the_Steps_in_the_wizard.jpg)
@@ -66,10 +66,15 @@ In the part of the Lab you will setup and configure the environment, we will use
 5. Now inspect the landing page and press **Go to your Node-RED flow editor**.
 ![Node-RED Boiler Template Inspect the landing page and press go to node red_ ditor](images/05_Node-RED_Inspect_the_landing_page_and_press_go_to_node_red_editor.jpg)
 
-6. Inside Node-RED we had to add the additional _Nodes_ we will use in our future flow. The [Node-RED Dashboard Package](https://flows.nodered.org/node/node-red-dashboard) and the [Node-RED Virtual IoT Device Package](https://www.npmjs.com/package/node-red-contrib-iot-virtual-device) . First select **manage palatte** from the menu on right upper side of the page.
+6. Inside Node-RED we have to add the additional _Nodes_ we will use in our future flow. The [Node-RED Dashboard Package](https://flows.nodered.org/node/node-red-dashboard) and the [Node-RED Virtual IoT Device Package](https://www.npmjs.com/package/node-red-contrib-iot-virtual-device) . First select **manage palatte** from the menu on right upper side of the page.
+
 ![Node-RED_Select_Manage-Palette](images/06_Node-RED_Select_Manage-Palette.jpg)
 
-7. Now choose the Tab **install** and search for each of these four nodes **node-red-dashboard**, **node-red-contrib-iot-virtual-device**, **node-red-contrib-objectstore**, **node-red-contrib-messagehub** and press install.
+7. Now choose the Tab **install**, search and press install for each of these four nodes:
+* **node-red-dashboard**,
+* **node-red-contrib-iot-virtual-device**,
+* **node-red-contrib-objectstore**,
+* **node-red-contrib-messagehub**
 ![Node-RED_Select_Manage-Palette](images/07_Node-RED_Install_nodes.jpg)
 
 8. After the installation verify that following sections for the installed nodes will appear on the left hand side.
@@ -80,13 +85,13 @@ In the part of the Lab you will setup and configure the environment, we will use
 
 **Watson IoT and MessageHub**
 
-1. Go back to your bluemix application and select on the left hand side **connections** and press **connect new**.
+1. Go back to your bluemix application and select **connections** on the left hand side and press **connect new**.
 ![Bluemix-services_add](images/01_Bluemix_services_add.jpg)
 
-2. Search for the Watson IoT Service by insert in the catalog search **Internet of Things Platform** and press on the service.
-![Bluemix-services_search](images/02_Bluemix_services_search.jpg)
+2. Search for the Watson IoT Service by inserting **Internet of Things Platform** in the catalog search and press on the service.
+![Bluemix-services_search](images/03_Bluemix_services_search.jpg)
 
-3. For the service name insert following name **taxi-simulator-InternetOfThingsPlatform** and press **create**. Do **NOT** select restage for now.
+3. For the service name insert **taxi-simulator-InternetOfThingsPlatform** and press **create**. Do **NOT** select restage for now.
 ![Bluemix-services_add_iot](images/02_Bluemix_services_add_iot.jpg)
 
 4. Repeat the steps 1 to 3 for the Service **MessageHub**
@@ -100,27 +105,27 @@ In the part of the Lab you will setup and configure the environment, we will use
 2. Search for the **Cloud Object Storage** directly in the catalog and select in this infrastructure component the **Bluemix Storage Swift**.
 ![Bluemix-services_cloud_object_storage](images/05_Bluemix_services_cloud_object_storage.jpg)
 
-3. Name the service like this **taxi-simulator-ObjectStorage** and press create. _NOTE:_ You can only use **ONE** instance per **ORAGNIZATION** of **Cloud Object Storage**.                       
+3. Name the service **taxi-simulator-ObjectStorage** and press create. _NOTE:_ You can only use **ONE** instance per **ORAGNIZATION** of **Cloud Object Storage**.                       
 ![Bluemix-services_create_object_storage](images/06_Bluemix_services_create_object_storage.jpg)
 
 4. Open your Bluemix Application in the Bluemix Dashboard and select **connections**.
 
-5. Then select **connect existing** and search for your just created **Cloud Object Storage for Bluemix** service. If you are now ask to restage the application press **OK**.
+5. Then select **connect existing** and search for your just created **Cloud Object Storage for Bluemix** service. If you are now asked to restage the application, press **Restage**.
 
-6. Alter this steps have connected services look like in the following picture. In my case I have a different name for the **cloud object storage** service.                               
+6. After these steps, you have connected services as in the following picture. In my case I have a different name for the **cloud object storage** service.                               
 ![Bluemix-services_connected_services](images/07_Bluemix_services_connected_services.jpg)
 
 ---
-# 2. Configure the  services and do changes in the Node-RED flow
+# 2. Configure the services and do changes in the Node-RED flow
 
 ---
 ## 2.1 Import existing Node-RED flow
 
 **Copy the prepared Node-RED flow into the your Node-RED instance**
 
-1. Open the file **Lab_start_20170928.json** in GitHub and all select the the content into the clipboard
+1. Open the file **Node-RED-Flows/Lab_start_20170928.json** in GitHub and all copy the content into the clipboard.
 
-2. Inside Node-RED select **Menu->Import->Clipboard**
+2. Inside Node-RED, select **Menu->Import->Clipboard**
 ![Node-RED_Import_node_red_flow_01](images/15_Node-RED_Import_node_red_flow_01.jpg)
 
 3. Take look into the three tabs
@@ -129,17 +134,17 @@ In the part of the Lab you will setup and configure the environment, we will use
 4. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
 ---
-## 2.3 Configure the Watson IoT inside the Node-RED Taxi-Simulation Tab
-Inside the **Taxi-Simulation** Tab you have following functionality:
+## 2.3 Configure the Watson IoT inside the Node-RED "Taxi-Simulation" Tab
+Inside the **Taxi-Simulation** tab you have following functionality:
 
 1. With the taxi-simulator you can create different Taxi devices inside the Watson IoT Platform.
-2. You can choose the count of the taxis you want to create.
+2. You can choose the number of taxis you want to create.
 3. A created taxi will simulate speed and geolocation and the created data will be stored in a database.
-4. The flow contains a dashboard UI
+4. The flow contains a dashboard UI.
 
 ---
 ## 2.3.1  Watson IoT Service and Node-RED configuration
-Now you will create a app API-Key inside the Watson IoT Service and insert the information inside the existing Node-RED flow.
+Now you will create an app API-Key inside the Watson IoT Service and add the information to the existing Node-RED flow.
 
 1. Open the existing Watson IoT Service and press launch
 ![Watson_IoT_open](images/01_Watson_IoT_open.jpg)
@@ -151,7 +156,7 @@ Now you will create a app API-Key inside the Watson IoT Service and insert the i
 **NOTE: DON'T CLOSE THIS WINDOW!!!**
 ![Watson_IoT_app_key_03](images/03_Watson_IoT_app_key_03.jpg)
 
-4. Now copy and paste API Key and Authentication Token into  the Node-RED flow in Tab **Configure-TaxiSimulation**, by open the function node **set predefined config for Watson IoT** and replace the existing **API Key** and **API Token** with your value. Use **API Key** for **Username** and **API Token** for **Password**.
+4. Now copy and paste API Key and Authentication Token into the Node-RED flow in the tab **Configure-TaxiSimulation**, by opening the function node **set predefined config for Watson IoT** and replacing the existing **API Key** and **API Token** with your values. Use **API Key** for **Username** and **API Token** for **Password**.
 ```
       /* Watson IoT:
          ============
@@ -172,7 +177,7 @@ Now you will create a app API-Key inside the Watson IoT Service and insert the i
 6. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
 ---
-## 2.4 Configure the ObjectStorage Nodes inside the Node-RED Configure-Blob for ObjectStorage Tab and Taxi-Simulation Tab
+## 2.4 Configure the ObjectStorage Nodes inside the Node-RED "Configure-Blob for ObjectStorage" Tab and "Taxi-Simulation" Tab
 
 You have to configure the credentials of the ObjectStorage usage inside Node-RED
 
@@ -197,10 +202,10 @@ You have to configure the credentials of the ObjectStorage usage inside Node-RED
 
 
 ---
-## 2.5 Configure the MessageHub Node inside the Node-RED Configure-Blob for ObjectStorage Tab
+## 2.5 Configure the MessageHub Node inside the Node-RED "Configure-Blob for ObjectStorage" Tab
 
-In this tab you can create a sample data record, with will be stored in the ObjectStorage database.
-We need to insert the credential into the node configuration.
+In this tab you can create a sample data record, which will be stored in the ObjectStorage database.
+We need to insert the credentials into the node configuration.
 
 1. Open the MessageHub node
 ![01_Message_Hub_01](images/01_Message_Hub_01.jpg)
@@ -208,7 +213,7 @@ We need to insert the credential into the node configuration.
 2. Open the MessageHub Service, create one service credential (1) and copy the credential into the clipboard (4).
 ![02_Message_Hub_02](images/02_Message_Hub_02.jpg)
 
-3. Copy the credentials into the open the MessageHub node and press **OK**.
+3. Copy the credentials into the open MessageHub node and press **Done**.
 
 4. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
@@ -220,7 +225,7 @@ We need to insert the credential into the node configuration.
 * Use the Node-RED for implementing some logic and UI
 
 0. You will start with this flow                                           
-![Node-RED start with own flow](12_Node-RED_Start_own_flow.jpg)
+![Node-RED start with own flow](images/12_Node-RED_Start_own_flow.jpg)
 
 1. Create IoT input node
 
@@ -235,7 +240,7 @@ We need to insert the credential into the node configuration.
 ![Node-RED configure switch node](images/10_Node-RED_Configure_switch_node.jpg)
 
 7. Create a new debug node and connect each output of the switch node.              
-![Node-RED configure connect switch to debug](images/12_Node-RED_Connect_debug_to_switch.jpg)
+![Node-RED configure connect switch to debug](images/11_Node-RED_Connect_debug_to_switch.jpg)
 
 8. Create a new function node to build a text message in case of danger.        
 ![Node-RED Function node danger](images/13_Node-RED_Function_node_danger.jpg)
@@ -245,7 +250,7 @@ We need to insert the credential into the node configuration.
   return msg;
 ```
 
-9. Create a two additional function nodes; one to build a text message in case of safe status and one for forward all data and insert following code.          
+9. Create a two additional function nodes; one to build a text message in case of safe status and one to forward all data, and insert following code.          
 ![Node-RED All function nodes](images/14_Node-RED_All_function_nodes.jpg)
 ```
   // Safe
