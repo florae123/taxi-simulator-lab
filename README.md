@@ -75,7 +75,8 @@ In this part of the Lab you will setup and configure the environment we will use
     * **node-red-contrib-iot-virtual-device**,
     * **node-red-contrib-objectstore**,
     * **node-red-contrib-messagehub**
-![Node-RED_Select_Manage-Palette](images/07_Node-RED_Install_nodes.jpg)
+
+    ![Node-RED_Select_Manage-Palette](images/07_Node-RED_Install_nodes.jpg)
 
 8. After the installation verify that following sections for the installed nodes will appear on the left hand side.
 ![Node-RED_Select_Manage-Palette](images/08_Node-RED_List_of_installed_nodes.jpg)
