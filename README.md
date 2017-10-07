@@ -68,13 +68,13 @@ In this part of the Lab you will setup and configure the environment we will use
 
 6. Inside Node-RED we have to add the additional _Nodes_ we will use in our future flow. The [Node-RED Dashboard Package](https://flows.nodered.org/node/node-red-dashboard) and the [Node-RED Virtual IoT Device Package](https://www.npmjs.com/package/node-red-contrib-iot-virtual-device) . First select **manage palatte** from the menu on right upper side of the page.
 
-![Node-RED_Select_Manage-Palette](images/06_Node-RED_Select_Manage-Palette.jpg)
+    ![Node-RED_Select_Manage-Palette](images/06_Node-RED_Select_Manage-Palette.jpg)
 
 7. Now choose the Tab **install**, search and press install for each of these four nodes:
-* **node-red-dashboard**,
-* **node-red-contrib-iot-virtual-device**,
-* **node-red-contrib-objectstore**,
-* **node-red-contrib-messagehub**
+    * **node-red-dashboard**,
+    * **node-red-contrib-iot-virtual-device**,
+    * **node-red-contrib-objectstore**,
+    * **node-red-contrib-messagehub**
 ![Node-RED_Select_Manage-Palette](images/07_Node-RED_Install_nodes.jpg)
 
 8. After the installation verify that following sections for the installed nodes will appear on the left hand side.
@@ -89,7 +89,8 @@ In this part of the Lab you will setup and configure the environment we will use
 ![Bluemix-services_add](images/01_Bluemix_services_add.jpg)
 
 2. Search for the Watson IoT Service by inserting **Internet of Things Platform** in the catalog search and press on the service.
-![Bluemix-services_search](images/03_Bluemix_services_search.jpg)
+
+    ![Bluemix-services_search](images/03_Bluemix_services_search.jpg)
 
 3. For the service name insert **taxi-simulator-InternetOfThingsPlatform** and press **create**. Do **NOT** select restage for now.
 ![Bluemix-services_add_iot](images/02_Bluemix_services_add_iot.jpg)
