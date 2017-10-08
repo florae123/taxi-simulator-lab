@@ -179,7 +179,7 @@ Now you will create an app API-Key inside the Watson IoT Service and add the inf
 ![Watson_IoT_app_key_05](images/05_Watson_IoT_app_key_05.jpg)
 
 6. Configure the API Key in the **IBM IoT** node in the tab **Configure-TaxiSimulation**. Insert **API Key**, **API Token** and replace the first 6 characters of the **Server-Name** with your Organization ID.
-![IBM_IoT_Node](images/01_IBM-Iot-Node.jpg)
+![IBM_IoT_Node](images/01_IBM-IoT-Node.jpg)
 
 7. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
