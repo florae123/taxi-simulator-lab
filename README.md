@@ -29,7 +29,7 @@ customize your own flow in Node-RED, by using the given IoT Data to display in y
 **The Lab contains the following steps**
 
 *a) Setup:*
-* A simulator for Taxis, which is sending their speed and location information.
+* A simulator for Taxis, sending their speed and location information.
 * Setup the IBM Watson IoT
 
 *b) Create your own Node-RED flow*
@@ -57,8 +57,8 @@ In this part of the Lab you will setup and configure the environment we will use
 2. Now you can see which application and services will be created. Give the application and route a name like **taxi-simulator-[YOUR-UNIQUE-NAME]**. Here you can find the **Cloudant DB** and the **Node.JS Server** and press **create**.
 ![Node-RED Boiler Template Configuration](images/02_Node-RED-Starter_Setup.jpg)
 
-3. After this step select **Visit App URL** to get to the Running Node-RED instance on the Node.JS Server.
-![Node-RED Boiler Template Visit URL](images/03_Node-RED-Starter-visit-URL.jpg)
+3. After this step, select **Visit App URL** to get to the Running Node-RED instance on the Node.JS Server.
+![Node-RED Boiler Template Visit URL](images/03_Node-RED-Starter_visit_URL.jpg)
 
 4. Now just **follow the steps in the wizard** to do the basic configuration of the Node-RED instance.
 ![Node-RED Boiler Template Follow the steps in the wizard](images/04_Node-RED_Follow_the_Steps_in_the_wizard.jpg)
@@ -78,7 +78,7 @@ In this part of the Lab you will setup and configure the environment we will use
 
     ![Node-RED_Select_Manage-Palette](images/07_Node-RED_Install_nodes.jpg)
 
-8. After the installation verify that following sections for the installed nodes will appear on the left hand side.
+8. After the installation, verify that the following sections for the installed nodes will appear on the left hand side.
 ![Node-RED_Select_Manage-Palette](images/08_Node-RED_List_of_installed_nodes.jpg)
 
 ---
@@ -104,8 +104,10 @@ In this part of the Lab you will setup and configure the environment we will use
 1. Now open the Bluemix catalog directly.
 ![Bluemix-services_catalog](images/04_Bluemix_services_catalog.jpg)
 
-2. Search for the **Cloud Object Storage** directly in the catalog and select in this infrastructure component the **Bluemix Storage Swift**.
-![Bluemix-services_cloud_object_storage](images/05_Bluemix_services_cloud_object_storage.jpg)
+2. Search for **Cloud Object Storage** directly in the catalog and in this infrastructure component, select **Object Storage OpenStack Swift for Bluemix**.
+![Bluemix-services_object_storage](images/05_Bluemix_Services_object-storage.jpg)
+
+# 2. Search for the **Cloud Object Storage** directly in the catalog and select in this infrastructure component the **Bluemix Storage Swift**. ![Bluemix-services_cloud_object_storage](images/05_Bluemix_services_cloud_object_storage.jpg)
 
 3. Name the service **taxi-simulator-ObjectStorage** and press create. _NOTE:_ You can only use **ONE** instance per **ORAGNIZATION** of **Cloud Object Storage**.                       
 ![Bluemix-services_create_object_storage](images/06_Bluemix_services_create_object_storage.jpg)
@@ -176,7 +178,10 @@ Now you will create an app API-Key inside the Watson IoT Service and add the inf
 5. Also copy the Organization ID you can find in the right upper corner of the Watson IoT WebPage into the **set predefined config for Watson IoT** node.
 ![Watson_IoT_app_key_05](images/05_Watson_IoT_app_key_05.jpg)
 
-6. Press **Deploy** in the right upper corner of the Node-RED Editor page.
+6. Configure the API Key in the **IBM IoT** node in the tab **Configure-TaxiSimulation**. Insert **API Key**, **API Token** and replace the first 6 characters of the **Server-Name** with your Organization ID.
+![IBM IoT Node](images/01_IBM-Iot-Node.jpg)
+
+7. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
 ---
 ## 2.4 Configure the ObjectStorage Nodes inside the Node-RED "Configure-Blob for ObjectStorage" Tab and "Taxi-Simulation" Tab
