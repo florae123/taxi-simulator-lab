@@ -130,7 +130,7 @@ In this part of the Lab you will setup and configure the environment we will use
 
 **Copy the prepared Node-RED flow into the your Node-RED instance**
 
-1. Open the file **Node-RED-Flows/Lab_start_20170928.json** in GitHub and copy all the content into the clipboard. **link to file**
+1. Open the file **[Node-RED-Flows/Lab_start_20170928.json](Node-RED-Flows/Lab_start_20170928.json)** in GitHub and copy all the content into the clipboard.
 
 2. Inside Node-RED, select **Menu->Import->Clipboard**
 ![Node-RED_Import_node_red_flow_01](images/15_Node-RED_Import_node_red_flow_01.jpg)
@@ -160,7 +160,7 @@ Now you will create an app API-Key inside the Watson IoT Service and add the inf
 ![Watson_IoT_app_key_01](images/02_Watson_IoT_app_key_01.jpg)
 
 3. Change the API Role to **Backend Trusted Application** and insert **Taxi-Simulation** as a comment.
-**NOTE: DON'T CLOSE THIS WINDOW! Before pressing *generate*, please copy the API Key and Authentication Token to your computer.**
+**NOTE: Don't close this window! Before pressing *generate*, please complete step 4.**
 ![Watson_IoT_app_key_03](images/03_Watson_IoT_app_key_03.jpg)
 
 4. Now copy and paste API Key and Authentication Token into the Node-RED flow in the tab **Configure-TaxiSimulation**, by opening the function node **"set predefined config for Watson IoT"** and replacing the existing **API Key** and **Authentication Token** with your values. Use **API Key** for **Username** and **Authentication Token** for **Password**.
@@ -172,11 +172,11 @@ Now you will create an app API-Key inside the Watson IoT Service and add the inf
       return msg
 ```
 
-5. Also copy the Organization ID you can find in the right upper corner of the Watson IoT WebPage into the **"set predefined config for Watson IoT"** node.
-![Watson_IoT_app_key_05](images/05_Watson_IoT_app_key_05.jpg)
+5. Also copy the Organization ID, which you can find in the right upper corner of the Watson IoT WebPage, into the **"set predefined config for Watson IoT"** node.
+![Watson_IoT_app_key_05](images/node-red-set-iot.png)
 
-6. Configure the API Key in the **IBM IoT** node in the tab **Configure-TaxiSimulation**. Insert **API Key**, **API Token** and replace the first 6 characters of the **Server-Name** with your Organization ID.
-![IBM_IoT_Node](images/01_IBM-IoT-Node.jpg)
+6. The **IBM IoT** node in the tab **Configure-TaxiSimulation** might cause an error. If so, insert **"*"** into *Device Id* property.
+![IBM_IoT_Node](images/node-red-ibm-iot.png)
 
 7. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
@@ -298,7 +298,7 @@ Click *create*.
 
     ![name new project](images/dsx-create-project-details.png)
 
-7. In your new project, select **add notebooks**. Choose **"From File"**, name the notebook *"Taxi"* (or anything else) and select the file **([python-notebook/Taxi.ipynb](python-notebook/Taxi.ipynb)** from this repository. Then press **Create Notebook**.
+7. In your new project, select **add notebooks**. Choose **"From File"**, name the notebook *"Taxi"* (or anything else) and select the file **[python-notebook/Taxi.ipynb](python-notebook/Taxi.ipynb)** from this repository. Then press **Create Notebook**.
 
     ![create notebook](images/dsx-create-notebook.png)
 
