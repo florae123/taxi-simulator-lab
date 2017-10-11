@@ -276,7 +276,7 @@ We need to insert the credentials into the node configuration.
 1. Select the *Data Science Experience* Service from the Catalog.
 ![DSX in the catalog](images/dsx-catalog.png)
 
-2. Name the service *taxi-simulator-Data Science Experience* or choose another name if you like.
+2. Name the service **taxi-simulator-Data Science Experience** or choose another name if you like.
 Click *create*.
 
 3. Open the **Data Science Experience** by pressing *Get Started*.
@@ -284,15 +284,16 @@ Click *create*.
 4. When asked to select *Organization* and *Space*, confirm the defaults and press *continue*.
 
 5. Create a new project by clicking *Create new > Project* in the upper right corner.
-![new project in DSX](images/dsx-create-project.png)
 
-6. Give your new project a name, for example **"Taxi"**. Leave the defaults in the other configurations.
+    ![new project in DSX](images/dsx-create-project.png)
 
-  The chosen Spark Service is the default Spark service that was configured when you set up your DSX account.
+6. Give your new project a name, for example **"Taxi"**. Leave the defaults for the other configurations.
 
-  The target object storage instance is your *taxi-simulator-ObjectStorage*.
+    The chosen Spark Service is the default Spark service that was configured when you set up your DSX account.
 
-  Press **create**.
+    The target object storage instance is your *taxi-simulator-ObjectStorage*.
+
+    Press **create**.
 
     ![name new project](images/dsx-create-project-details.png)
 
