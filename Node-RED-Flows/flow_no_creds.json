@@ -919,7 +919,7 @@
         "type": "function",
         "z": "8094923f.1a5d8",
         "name": "toString",
-        "func": "var tsamp = new Date();\nvar deviceTemplate = '{'+\n    '\"orgId\":\"'+        flow.get(\"orgid\")+'\",'+\n    '\"deviceType\":\"'+   msg.deviceType+'\",'+\n    '\"deviceId\":\"'+     msg.deviceId+'\",' +\n    '\"eventType\":\"'+    msg.eventOrCommandType+'\",'+\n    '\"timestamp\":\"'+    tsamp + '\",'+\n    '\"sensorData\":{'+\n        '\"location\":{'+\n            '\"longitude\":\"'+    msg.payload.d.longitude+'\",'+\n            '\"latitude\":\"'+     msg.payload.d.latitude+'\"'+\n        '},'+\n        '\"velocity\":\"'+ msg.payload.d.velocity+'\"'+\n    '}}';\nmsg.payload = deviceTemplate;\nreturn msg;",
+        "func": "var tsamp = new Date();\nvar deviceTemplate = '{'+\n    '\"orgId\":\"'+        flow.get(\"orgid\")+'\",'+\n    '\"deviceType\":\"'+   msg.deviceType+'\",'+\n    '\"deviceId\":\"'+     msg.deviceId+'\",' +\n    '\"eventType\":\"'+    msg.eventOrCommandType+'\",'+\n    '\"timestamp\":\"'+    tsamp + '\",'+\n    '\"sensorData\":{'+\n        '\"location\":{'+\n//            '\"longitude\":\"'+    msg.payload.d.longitude+'\",'+\n//            '\"latitude\":\"'+     msg.payload.d.latitude+'\"'+\n              '\"longitude\":'+    msg.payload.d.longitude+','+\n              '\"latitude\":'+     msg.payload.d.latitude+''+\n        '},'+\n//        '\"velocity\":\"'+ msg.payload.d.velocity+'\"'+\n          '\"velocity\":'+ msg.payload.d.velocity+''+\n    '}}';\nmsg.payload = deviceTemplate;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 428,
