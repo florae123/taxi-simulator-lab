@@ -278,6 +278,7 @@ We need to insert the credentials into the node configuration.
 
 2. Name the service **taxi-simulator-Data Science Experience** or choose another name if you like.
 Click *create*.
+![create DSX service](images/dsx-create-service.png)
 
 3. Open the **Data Science Experience** by pressing *Get Started*.
 
