@@ -58,7 +58,7 @@ In this part of the Lab you will setup and configure the environment we will use
 2. Now you can see which application and services will be created. Give the application and route a name like **taxi-simulator-[YOUR-UNIQUE-NAME]**. Here you can find the **Cloudant DB** and the **Node.JS Server** and press **create**.
 ![Node-RED Boiler Template Configuration](images/02_Node-RED-Starter_Setup.jpg)
 
-3. After this step, select **Visit App URL** to get to the Running Node-RED instance on the Node.JS Server.
+3. After this step, select **Visit App URL** to get to the Running Node-RED instance on the Node.JS Server. It might take a few minutes until the server is ready.
 ![Node-RED Boiler Template Visit URL](images/03_Node-RED-Starter_visit_URL.jpg)
 
 4. Now just **follow the steps in the wizard** to do the basic configuration of the Node-RED instance.
