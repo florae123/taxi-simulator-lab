@@ -38,7 +38,7 @@ customize your own flow in Node-RED, by using the given IoT Data to display in y
 
 **What you will use in IBM Bluemix?**
 
-* The **Node-RED Starter** _Boiler Template_ with contains a **Cloudant DB** and a **Node.JS Server**.
+* The **Node-RED Starter** _Boiler Template_ which contains a **Cloudant DB** and a **Node.JS Server**.
 * You will add additional nodes into the Node-RED instance ([Node-RED Dashboard Node](https://flows.nodered.org/node/node-red-dashboard), [Node-RED Virtual IoT Device Node](https://www.npmjs.com/package/node-red-contrib-iot-virtual-device), [Node-RED Objectstore](http://flows.nodered.org/node/node-red-contrib-objectstore) and [Node-RED MessageHub](https://flows.nodered.org/node/node-red-contrib-messagehub))
 * The [Watson IoT Service](https://console.bluemix.net/catalog/services/internet-of-things-platform?env_id=ibm%3Ayp%3Aus-south)
 * The [Object Store Database](https://console.bluemix.net/catalog/services/Object-Storage?env_id=ibm%3Ayp%3Aus-south)
@@ -52,7 +52,8 @@ In this part of the Lab you will setup and configure the environment we will use
 ### 1.1 Setup and configure Node-RED
 
 1. Logon to your Bluemix Account and search the catalog for Node-RED. You will find the **Node-RED Boiler Template** and click on the icon.
-![Node-RED Boiler Template](images/01_Node-RED_Starter.jpg)
+
+    ![Node-RED Boiler Template](images/01_Node-RED_Starter.jpg)
 
 2. Now you can see which application and services will be created. Give the application and route a name like **taxi-simulator-[YOUR-UNIQUE-NAME]**. Here you can find the **Cloudant DB** and the **Node.JS Server** and press **create**.
 ![Node-RED Boiler Template Configuration](images/02_Node-RED-Starter_Setup.jpg)
@@ -66,7 +67,7 @@ In this part of the Lab you will setup and configure the environment we will use
 5. Now inspect the landing page and press **Go to your Node-RED flow editor**.
 ![Node-RED Boiler Template Inspect the landing page and press go to node red_ ditor](images/05_Node-RED_Inspect_the_landing_page_and_press_go_to_node_red_editor.jpg)
 
-6. Inside Node-RED we have to add the additional _Nodes_ we will use in our future flow. The [Node-RED Dashboard Package](https://flows.nodered.org/node/node-red-dashboard) and the [Node-RED Virtual IoT Device Package](https://www.npmjs.com/package/node-red-contrib-iot-virtual-device) . First select **manage palatte** from the menu on right upper side of the page.
+6. Inside Node-RED we have to add the additional _Nodes_ we will use in our future flow. (For example the [Node-RED Dashboard Package](https://flows.nodered.org/node/node-red-dashboard) and the [Node-RED Virtual IoT Device Package](https://www.npmjs.com/package/node-red-contrib-iot-virtual-device).) First select **manage palatte** from the menu on right upper side of the page.
 
     ![Node-RED_Select_Manage-Palette](images/06_Node-RED_Select_Manage-Palette.jpg)
 
