@@ -297,8 +297,8 @@ Click *create*.
 
     ![name new project](images/dsx-create-project-details.png)
 
-7. In your new project, select **add notebooks**. Choose **"From File"**, name the notebook *"Taxi"* (or anything else) and select the file **python-notebook/Taxi.ipynb** from this repository.
+7. In your new project, select **add notebooks**. Choose **"From File"**, name the notebook *"Taxi"* (or anything else) and select the file **python-notebook/Taxi.ipynb** from this repository. Then press **Create Notebook**.
 
     ![create notebook](images/dsx-create-notebook.png)
 
-8. Follow the instructions in the notebook.
+8. Follow the instructions given in the notebook.
