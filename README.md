@@ -267,3 +267,37 @@ We need to insert the credentials into the node configuration.
   return msg;
 ```
 6. Press **Deploy** in the right upper corner of the Node-RED Editor page.
+
+
+---
+# 4. Analyzing the IoT data with Data Science Experience
+---
+
+1. Select the *Data Science Experience* Service from the Catalog.
+![DSX in the catalog](images/dsx-catalog.png)
+
+2. Name the service *taxi-simulator-Data Science Experience* or choose another name if you like.
+Click *create*.
+
+3. Open the **Data Science Experience** by pressing *Get Started*.
+
+4. When asked to select *Organization* and *Space*, confirm the defaults and press *continue*.
+
+5. Create a new project by clicking *Create new > Project* in the upper right corner.
+![new project in DSX](images/dsx-create-project.png)
+
+6. Give your new project a name, for example **"Taxi"**. Leave the defaults in the other configurations.
+
+  The chosen Spark Service is the default Spark service that was configured when you set up your DSX account.
+
+  The target object storage instance is your *taxi-simulator-ObjectStorage*.
+
+  Press **create**.
+
+    ![name new project](images/dsx-create-project-details.png)
+
+7. In your new project, select **add notebooks**. Choose **"From File"**, name the notebook *"Taxi"* (or anything else) and select the file **python-notebook/Taxi.ipynb** from this repository.
+
+    ![create notebook](images/dsx-create-notebook.png)
+
+8. Follow the instructions in the notebook.
