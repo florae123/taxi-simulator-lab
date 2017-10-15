@@ -46,11 +46,11 @@ customize your own flow in Node-RED, by using the given IoT Data to display in y
 
 ---
 ## Steps of the Lab
-1. [Setup the needed application and services](#1. Setup the needed application and services)
-2. [Configure the services and adapt the Node-RED flow](#2.-configure-the-services-and-adapt-the-node-red-flow)
+1. [Setup the needed application and services](#part1)
+2. [Configure the services and adapt the Node-RED flow](#part2)
 
 ---
-## 1. Setup the needed application and services
+## 1. Setup the needed application and services <a name="part1"></a>
 
 In this part of the Lab you will setup and configure the environment we will use for your **Taxi-Simulator**.
 
@@ -128,7 +128,7 @@ In this part of the Lab you will setup and configure the environment we will use
 ![Bluemix-services_connected_services](images/07_Bluemix_services_connected_services.jpg)
 
 ---
-# 2. Configure the services and adapt the Node-RED flow
+# 2. Configure the services and adapt the Node-RED flow <a name="part1"></a>
 
 ---
 ## 2.1 Import existing Node-RED flow
