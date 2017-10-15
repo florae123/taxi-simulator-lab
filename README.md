@@ -1,4 +1,4 @@
-# Bluemix Hands-on Lab for IoT: Creating a Taxi-Simulator <a name="part0"></a>
+# Bluemix Hands-on Lab for IoT: Creating a Taxi-Simulator
 
 ---
 ## Steps of the Lab
@@ -16,7 +16,7 @@
 5. [Analyzing the IoT data with Data Science Experience](#part5)
 
 ---
-##Overview
+## Overview <a name="part0"></a>
 
 In this Lab you will create a **Taxi-Simulator** for IoT.
 This Taxi-Simulator will create **sample data** for a Data Analytics part, in one of the following Labs of a Hands-on Workshop.
