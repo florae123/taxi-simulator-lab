@@ -123,7 +123,7 @@ In this part of the Lab you will setup and configure the environment we will use
 ![Bluemix-services_connected_services](images/07_Bluemix_services_connected_services.jpg)
 
 ---
-# 2. Configure the services and do changes in the Node-RED flow
+# 2. Configure the services and adapt the Node-RED flow
 
 ---
 ## 2.1 Import existing Node-RED flow
@@ -141,7 +141,7 @@ In this part of the Lab you will setup and configure the environment we will use
 4. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
 ---
-## 2.3 Configure the Watson IoT inside the Node-RED "Configure-TaxiSimulation" Tab
+## 2.3 Configure Watson IoT inside the Node-RED "Configure-TaxiSimulation" Tab
 Inside the **Configure-TaxiSimulation** tab you have following functionality:
 
 1. With the taxi-simulator you can create different Taxi devices inside the Watson IoT Platform.
@@ -211,7 +211,7 @@ You have to configure the credentials of the ObjectStorage usage inside Node-RED
 In this tab you can create a sample data record, which will be stored in the ObjectStorage database.
 We need to insert the credentials into the node configuration.
 
-1. Open the MessageHub node
+1. Open the "MessageHub" node
 ![01_Message_Hub_01](images/01_Message_Hub_01.jpg)
 
 2. Open the MessageHub Service, create one service credential (1) and copy the credential into the clipboard (4).
@@ -222,7 +222,7 @@ We need to insert the credentials into the node configuration.
 4. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
 ---
-# 3. Use the Watson IoT input to Node-RED
+# 3. Use the Watson IoT input in Node-RED
 
 **Create your own Node-RED flow**
 * Use Watson IoT as input in your flow
@@ -240,7 +240,7 @@ We need to insert the credentials into the node configuration.
 
 4. Add a switch node
 
-5. In the switch node, insert the string **payload.d.velocity** into "property and add a rules for >25 and <25.              
+5. In the switch node, insert the string **payload.d.velocity** into "property" and add rules for >25 and <25.              
 ![Node-RED configure switch node](images/10_Node-RED_Configure_switch_node.jpg)
 
 6. Create a new debug node and connect each output of the switch node.              
@@ -268,9 +268,30 @@ We need to insert the credentials into the node configuration.
 ```
 9. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
+---
+# 4. Use the Web UI for Simulation
+---
+
+1. Copy the URL of your Node-RED application and add **/ui** at the end, e.g.
+    ```
+    https://taxi-simulartor-tsuedbro.eu-gb.mybluemix.net/ui/
+    ```
+
+    There is a menu icon in the upper left corner of the UI, please use it for navigation.
+
+2. Under **"Taxi-Sim IoT Config"**, you can insert the API Key and Organization ID of the Watson IoT Service as well as the number of taxis you wish to simulate. Then click *"submit"* to start the simulation.
+
+3. Under **"Taxi-Sim Status"**, you can see the status of your current simulation. There are three graphs showing the velocity over time for taxis 1 and 2 and for all taxis combined.
+
+    To stop the simulation, press **"Turn off Taxi-Simulation"**. To start a simulation of 2 taxis, press **"Turn on Taxi Simulation (2 Taxis)"**
+
+    ![Taxi Sim Status](images/ui-taxi-sim-status.png)
+
+4. Under **"Taxi-Sim IoT Output"**, you can see the result of the node-red flow you added into the *"Lab-Use IoT Information"* Tab in Step 3. The velocity of *Taxi01* is displayed and there are alerts for when the velocity is too high.
+![Taxi Sim IoT](images/ui-taxi-sim-iot.png)
 
 ---
-# 4. Analyzing the IoT data with Data Science Experience
+# 5. Analyzing the IoT data with Data Science Experience
 ---
 
 1. Select the *Data Science Experience* Service from the Catalog.
