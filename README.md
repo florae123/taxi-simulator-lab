@@ -13,7 +13,7 @@
     4. [Configure the MessageHub Node inside the Node-RED "Configure-Blob for ObjectStorage" Tab](#part2-4)
 3. [Use the Watson IoT input in Node-RED](#part3)
 4. [Use the Web UI for Simulation](#part4)
-5. [Analyzing the IoT data with Data Science Experience](#part5)
+5. [Analyze the IoT data with Data Science Experience](#part5)
 
 ---
 ## Overview <a name="part0"></a>
