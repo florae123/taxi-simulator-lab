@@ -47,7 +47,13 @@ customize your own flow in Node-RED, by using the given IoT Data to display in y
 ---
 ## Steps of the Lab
 1. [Setup the needed application and services](#part1)
+    1.1 [Setup and configure Node-RED](#part1-1)
+    1.2 [Create and bind the needed Bluemix services](#part1-2)
 2. [Configure the services and adapt the Node-RED flow](#part2)
+    2.1 [Import existing Node-RED flow](#part2-1)
+    2.2 [Configure Watson IoT inside the Node-RED "Configure-TaxiSimulation" Tab](#part2-2)
+    2.3 [Configure the ObjectStorage Nodes inside the Node-RED "Configure-Blob for ObjectStorage" Tab and "Taxi-Simulation" Tab](#part2-3)
+    2.4 [Configure the MessageHub Node inside the Node-RED "Configure-Blob for ObjectStorage" Tab](#part2-4)
 3. [Use the Watson IoT input in Node-RED](#part3)
 4. [Use the Web UI for Simulation](#part4)
 5. [Analyzing the IoT data with Data Science Experience](#part5)
@@ -57,7 +63,7 @@ customize your own flow in Node-RED, by using the given IoT Data to display in y
 
 In this part of the Lab you will setup and configure the environment we will use for your **Taxi-Simulator**.
 
-### 1.1 Setup and configure Node-RED
+### 1.1 Setup and configure Node-RED <a name="part1-1"></a>
 
 1. Logon to your Bluemix Account and search the catalog for Node-RED. You will find the **Node-RED Boiler Template** and click on the icon.
 
@@ -93,7 +99,7 @@ In this part of the Lab you will setup and configure the environment we will use
 ![Node-RED_Select_Manage-Palette](images/08_Node-RED_List_of_installed_nodes.jpg)
 
 ---
-### 1.2 Create and bind the needed Bluemix services
+### 1.2 Create and bind the needed Bluemix services <a name="part1-2"></a>
 
 **Watson IoT and MessageHub**
 
@@ -134,7 +140,7 @@ In this part of the Lab you will setup and configure the environment we will use
 # 2. Configure the services and adapt the Node-RED flow <a name="part2"></a>
 
 ---
-## 2.1 Import existing Node-RED flow
+## 2.1 Import existing Node-RED flow <a name="part2-1"></a>
 
 **Copy the prepared Node-RED flow into the your Node-RED instance**
 
@@ -149,7 +155,7 @@ In this part of the Lab you will setup and configure the environment we will use
 4. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
 ---
-## 2.3 Configure Watson IoT inside the Node-RED "Configure-TaxiSimulation" Tab
+## 2.2 Configure Watson IoT inside the Node-RED "Configure-TaxiSimulation" Tab <a name="part2-2"></a>
 Inside the **Configure-TaxiSimulation** tab you have following functionality:
 
 1. With the taxi-simulator you can create different Taxi devices inside the Watson IoT Platform.
@@ -158,7 +164,7 @@ Inside the **Configure-TaxiSimulation** tab you have following functionality:
 4. The flow contains a dashboard UI.
 
 ---
-## 2.3.1  Watson IoT Service and Node-RED configuration
+## 2.2.1  Watson IoT Service and Node-RED configuration
 Now you will create an app API-Key inside the Watson IoT Service and add the information to the existing Node-RED flow.
 
 1. Open the existing Watson IoT Service and press launch
@@ -189,7 +195,7 @@ Now you will create an app API-Key inside the Watson IoT Service and add the inf
 7. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
 ---
-## 2.4 Configure the ObjectStorage Nodes inside the Node-RED "Configure-Blob for ObjectStorage" Tab and "Taxi-Simulation" Tab
+## 2.3 Configure the ObjectStorage Nodes inside the Node-RED "Configure-Blob for ObjectStorage" Tab and "Taxi-Simulation" Tab <a name="part2-3"></a>
 
 You have to configure the credentials of the ObjectStorage usage inside Node-RED
 
@@ -214,7 +220,7 @@ You have to configure the credentials of the ObjectStorage usage inside Node-RED
 
 
 ---
-## 2.5 Configure the MessageHub Node inside the Node-RED "Configure-Blob for ObjectStorage" Tab
+## 2.4 Configure the MessageHub Node inside the Node-RED "Configure-Blob for ObjectStorage" Tab <a name="part2-4"></a>
 
 In this tab you can create a sample data record, which will be stored in the ObjectStorage database.
 We need to insert the credentials into the node configuration.
