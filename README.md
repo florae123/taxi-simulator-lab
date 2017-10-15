@@ -47,7 +47,7 @@ customize your own flow in Node-RED, by using the given IoT Data to display in y
 ---
 ## Steps of the Lab
 1. [Setup the needed application and services](#1. Setup the needed application and services)
-2. [Configure the services and adapt the Node-RED flow](#2. Configure the services and adapt the Node-RED flow)
+2. [Configure the services and adapt the Node-RED flow](#2.-configure-the-services-and-adapt-the-node-red-flow)
 
 ---
 ## 1. Setup the needed application and services
