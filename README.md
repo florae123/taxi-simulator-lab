@@ -47,8 +47,8 @@ customize your own flow in Node-RED, by using the given IoT Data to display in y
 ---
 ## Steps of the Lab
 1. [Setup the needed application and services](#part1)
-    1.1 [Setup and configure Node-RED](#part1-1)
-    1.2 [Create and bind the needed Bluemix services](#part1-2)
+    1. [Setup and configure Node-RED](#part1-1)
+    2. [Create and bind the needed Bluemix services](#part1-2)
 2. [Configure the services and adapt the Node-RED flow](#part2)
     1. [Import existing Node-RED flow](#part2-1)
     2. [Configure Watson IoT inside the Node-RED "Configure-TaxiSimulation" Tab](#part2-2)
