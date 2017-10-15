@@ -96,7 +96,6 @@ In this part of the Lab you will setup and configure the environment we will use
     * **node-red-contrib-objectstore**,
     * **node-red-contrib-messagehub**
 
-    *!This image has one step 2 and two steps 3 ?!*
     ![Node-RED_Select_Manage-Palette](images/07_Node-RED_Install_nodes.jpg)
 
 8. After the installation, verify that the following sections for the installed nodes will appear on the left hand side.
