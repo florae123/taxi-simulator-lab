@@ -229,24 +229,24 @@ We need to insert the credentials into the node configuration.
 * Use the Node-RED for implementing some logic and UI
 
 0. You will start with this flow                                           
-![Node-RED start with own flow](images/12_Node-RED_Start_own_flow.jpg)
+![Node-RED start with own flow](images/node-red-start-own-flow.png)
 
 1. Create IoT input node
 
 2. Configure IoT input node.                                             
 ![Node-RED configure iot input node](images/11_Node-RED_Configure_iot_input_node.jpg)
 
-4. Add debug node and make a connection to the IoT input node
+3. Add debug node and make a connection to the IoT input node
 
-5. Add a switch node
+4. Add a switch node
 
-6. Insert in the switch node into property the string **payload.d.velocity** and add a rules for > 50 and <50.              
+5. In the switch node, insert the string **payload.d.velocity** into "property and add a rules for >25 and <25.              
 ![Node-RED configure switch node](images/10_Node-RED_Configure_switch_node.jpg)
 
-7. Create a new debug node and connect each output of the switch node.              
+6. Create a new debug node and connect each output of the switch node.              
 ![Node-RED configure connect switch to debug](images/11_Node-RED_Connect_debug_to_switch.jpg)
 
-8. Create a new function node to build a text message in case of danger.        
+7. Create a new function node to build a text message in case of danger.        
 ![Node-RED Function node danger](images/13_Node-RED_Function_node_danger.jpg)
 ```
   // Danger
@@ -254,7 +254,7 @@ We need to insert the credentials into the node configuration.
   return msg;
 ```
 
-9. Create a two additional function nodes; one to build a text message in case of safe status and one to forward all data, and insert following code.          
+8. Create a two additional function nodes; one to build a text message in case of safe status and one to forward all data, and insert following code.          
 ![Node-RED All function nodes](images/14_Node-RED_All_function_nodes.jpg)
 ```
   // Safe
@@ -266,7 +266,7 @@ We need to insert the credentials into the node configuration.
   msg.payload = msg.payload.d.velocity;
   return msg;
 ```
-6. Press **Deploy** in the right upper corner of the Node-RED Editor page.
+9. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
 
 ---
@@ -288,7 +288,7 @@ Click *create*.
 
     ![new project in DSX](images/dsx-create-project.png)
 
-6. Give your new project a name, for example **"Taxi"**. Leave the defaults for the other configurations.
+6. Give your new project a name, for example **"taxi-lab"**. Leave the defaults for the other configurations.
 
     The chosen Spark Service is the default Spark service that was configured when you set up your DSX account.
 
