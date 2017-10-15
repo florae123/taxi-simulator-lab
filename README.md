@@ -48,6 +48,9 @@ customize your own flow in Node-RED, by using the given IoT Data to display in y
 ## Steps of the Lab
 1. [Setup the needed application and services](#part1)
 2. [Configure the services and adapt the Node-RED flow](#part2)
+3. [Use the Watson IoT input in Node-RED](#part3)
+4. [Use the Web UI for Simulation](#part4)
+5. [Analyzing the IoT data with Data Science Experience](#part5)
 
 ---
 ## 1. Setup the needed application and services <a name="part1"></a>
@@ -128,7 +131,7 @@ In this part of the Lab you will setup and configure the environment we will use
 ![Bluemix-services_connected_services](images/07_Bluemix_services_connected_services.jpg)
 
 ---
-# 2. Configure the services and adapt the Node-RED flow <a name="part1"></a>
+# 2. Configure the services and adapt the Node-RED flow <a name="part2"></a>
 
 ---
 ## 2.1 Import existing Node-RED flow
@@ -227,7 +230,7 @@ We need to insert the credentials into the node configuration.
 4. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
 ---
-# 3. Use the Watson IoT input in Node-RED
+# 3. Use the Watson IoT input in Node-RED <a name="part3"></a>
 
 **Create your own Node-RED flow**
 * Use Watson IoT as input in your flow
@@ -274,7 +277,7 @@ We need to insert the credentials into the node configuration.
 9. Press **Deploy** in the right upper corner of the Node-RED Editor page.
 
 ---
-# 4. Use the Web UI for Simulation
+# 4. Use the Web UI for Simulation <a name="part4"></a>
 ---
 
 1. Copy the URL of your Node-RED application and add **/ui** at the end, e.g.
@@ -296,7 +299,7 @@ We need to insert the credentials into the node configuration.
 ![Taxi Sim IoT](images/ui-taxi-sim-iot.png)
 
 ---
-# 5. Analyzing the IoT data with Data Science Experience
+# 5. Analyzing the IoT data with Data Science Experience <a name="part5"></a>
 ---
 
 1. Select the *Data Science Experience* Service from the Catalog.
