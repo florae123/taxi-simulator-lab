@@ -1,5 +1,23 @@
 # Bluemix Hands-on Lab for IoT: Creating a Taxi-Simulator <a name="part0"></a>
 
+---
+## Steps of the Lab
+0. [Overview](#part0)
+1. [Setup the needed application and services](#part1)
+    1. [Setup and configure Node-RED](#part1-1)
+    2. [Create and bind the needed Bluemix services](#part1-2)
+2. [Configure the services and adapt the Node-RED flow](#part2)
+    1. [Import existing Node-RED flow](#part2-1)
+    2. [Configure Watson IoT inside the Node-RED "Configure-TaxiSimulation" Tab](#part2-2)
+    3. [Configure the ObjectStorage Nodes inside the Node-RED "Configure-Blob for ObjectStorage" Tab and "Taxi-Simulation" Tab](#part2-3)
+    4. [Configure the MessageHub Node inside the Node-RED "Configure-Blob for ObjectStorage" Tab](#part2-4)
+3. [Use the Watson IoT input in Node-RED](#part3)
+4. [Use the Web UI for Simulation](#part4)
+5. [Analyzing the IoT data with Data Science Experience](#part5)
+
+---
+##Overview
+
 In this Lab you will create a **Taxi-Simulator** for IoT.
 This Taxi-Simulator will create **sample data** for a Data Analytics part, in one of the following Labs of a Hands-on Workshop.
 
@@ -44,20 +62,6 @@ customize your own flow in Node-RED, by using the given IoT Data to display in y
 * The [Object Store Database](https://console.bluemix.net/catalog/services/Object-Storage?env_id=ibm%3Ayp%3Aus-south)
 * The [Message Hub](https://console.bluemix.net/catalog/?context=services&app=bdd3e76c-09b7-47a6-8515-50c7e6b477e9&env_id=ibm%3Ayp%3Aeu-gb&search=Message%20Hub)
 
----
-## Steps of the Lab
-0. [Overview](#part0)
-1. [Setup the needed application and services](#part1)
-    1. [Setup and configure Node-RED](#part1-1)
-    2. [Create and bind the needed Bluemix services](#part1-2)
-2. [Configure the services and adapt the Node-RED flow](#part2)
-    1. [Import existing Node-RED flow](#part2-1)
-    2. [Configure Watson IoT inside the Node-RED "Configure-TaxiSimulation" Tab](#part2-2)
-    3. [Configure the ObjectStorage Nodes inside the Node-RED "Configure-Blob for ObjectStorage" Tab and "Taxi-Simulation" Tab](#part2-3)
-    4. [Configure the MessageHub Node inside the Node-RED "Configure-Blob for ObjectStorage" Tab](#part2-4)
-3. [Use the Watson IoT input in Node-RED](#part3)
-4. [Use the Web UI for Simulation](#part4)
-5. [Analyzing the IoT data with Data Science Experience](#part5)
 
 ---
 ## 1. Setup the needed application and services <a name="part1"></a>
