@@ -45,6 +45,11 @@ customize your own flow in Node-RED, by using the given IoT Data to display in y
 * The [Message Hub](https://console.bluemix.net/catalog/?context=services&app=bdd3e76c-09b7-47a6-8515-50c7e6b477e9&env_id=ibm%3Ayp%3Aeu-gb&search=Message%20Hub)
 
 ---
+## Steps of the Lab
+1. [Setup the needed application and services](#1. Setup the needed application and services)
+2. [Configure the services and adapt the Node-RED flow](#2. Configure the services and adapt the Node-RED flow)
+
+---
 ## 1. Setup the needed application and services
 
 In this part of the Lab you will setup and configure the environment we will use for your **Taxi-Simulator**.
